@@ -1,2 +1,19 @@
+# secrets: the decision API key lives only here
 .env
-typo.md
+.env.*
+!.env.example
+
+# caches and builds
+__pycache__/
+*.pyc
+.pytest_cache/
+frontend/node_modules/
+frontend/dist-replay/
+release/
+_ref/
+
+# recordings (runs written by the server or the CLI) and browser screenshots
+runs/
+backend/runs/
+tests/results/screens/*.png
+.DS_Store
