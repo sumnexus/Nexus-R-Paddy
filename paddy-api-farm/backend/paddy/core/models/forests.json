@@ -1,0 +1,998 @@
+{
+ "version": "v4 (Oct 2026)",
+ "built": "2026-10-27",
+ "models": {
+  "soil": {
+   "type": "cls",
+   "nClasses": 3,
+   "F": 15,
+   "nTrees": 25,
+   "combine": "mean",
+   "cap": null,
+   "threshold": null,
+   "report": {
+    "trainRows": 444942,
+    "synthetic": 300000,
+    "farmRows": 144942,
+    "sets": [
+     "A",
+     "D"
+    ],
+    "test": {
+     "T": {
+      "n": 250231,
+      "acc": 0.9732886812585171,
+      "ci": [
+       0.9726496156563293,
+       0.9739132150250396
+      ],
+      "worst": {
+       "crop": "tomato",
+       "n": 26674,
+       "acc": 0.9654719952013197
+      },
+      "farmYears": 200,
+      "ciFarm": [
+       0.972191810098622,
+       0.9743738472090989
+      ]
+     },
+     "C": {
+      "n": 626118,
+      "acc": 0.9731775799449944,
+      "ci": [
+       0.9727744711988904,
+       0.9735748822845165
+      ],
+      "worst": {
+       "crop": "brinjal",
+       "n": 91298,
+       "acc": 0.9649718504238867
+      },
+      "farmYears": 500,
+      "ciFarm": [
+       0.9724031907272787,
+       0.9739455482760044
+      ]
+     },
+     "held-out farms": {
+      "n": 41181,
+      "acc": 0.9727544255846142,
+      "ci": [
+       0.9711374045890531,
+       0.9742832523159379
+      ],
+      "worst": {
+       "crop": "chilli",
+       "n": 3389,
+       "acc": 0.954558866922396
+      }
+     },
+     "synthetic hard cases": {
+      "n": 20000,
+      "acc": 0.98305,
+      "ci": [
+       0.9811659876679831,
+       0.984748479481167
+      ],
+      "worst": {
+       "crop": "paddy",
+       "n": 2529,
+       "acc": 0.9798339264531435
+      }
+     }
+    },
+    "importance": [
+     {
+      "f": "EC \u00f7 crop tolerance",
+      "v": 0.1539046147097254
+     },
+     {
+      "f": "sand outside preferred range",
+      "v": 0.12735178811171016
+     },
+     {
+      "f": "N sufficiency",
+      "v": 0.10658965603223446
+     },
+     {
+      "f": "pH \u2212 crop optimum low",
+      "v": 0.09988161499549655
+     },
+     {
+      "f": "P sufficiency",
+      "v": 0.07454899957695006
+     },
+     {
+      "f": "pH \u2212 crop tolerance low",
+      "v": 0.07128712951998709
+     },
+     {
+      "f": "crop tolerance high \u2212 pH",
+      "v": 0.0688632941169946
+     },
+     {
+      "f": "clay %",
+      "v": 0.06463639719015714
+     }
+    ],
+    "oob": 0.9797184769978671,
+    "ceiling": {
+     "value": 0.9732411252002054,
+     "kind": "estimate",
+     "text": "Ceiling about 97.3%: the probe's noise makes squares right at a rule boundary a coin toss (each probed square of the 200 test farm-years re-drawn 200 times with the probe's noise; the rules applied to the probe reading itself score 97.4%)."
+    },
+    "before": {
+     "n": 32343,
+     "acc": 0.943511733605417,
+     "ci": [
+      0.9409426123297536,
+      0.9459755095310218
+     ],
+     "worst": {
+      "crop": "var2x0",
+      "n": 81,
+      "acc": 0.8395061728395061
+     },
+     "farmYears": 24
+    },
+    "file": "soil_f"
+   },
+   "id": "soil",
+   "nodes": 120167,
+   "depth": 22
+  },
+  "pest": {
+   "type": "cls",
+   "nClasses": 2,
+   "F": 27,
+   "nTrees": 40,
+   "combine": "mean",
+   "cap": null,
+   "threshold": 0.01,
+   "report": {
+    "trainRows": 378252,
+    "synthetic": 0,
+    "farmRows": 378252,
+    "sets": [
+     "D"
+    ],
+    "test": {
+     "T": {
+      "n": 38792050,
+      "acc": 0.9978763432198092,
+      "ci": [
+       0.9978618072728304,
+       0.9978907805568115
+      ],
+      "worst": {
+       "crop": "beans",
+       "n": 4755745,
+       "acc": 0.9970744857009785
+      },
+      "balanced": 0.9985024047192228,
+      "recallPos": 0.9991285403050109,
+      "recallNeg": 0.9978762691334349,
+      "pos": 2295,
+      "farmYears": 200,
+      "ciFarm": [
+       0.9975832918351671,
+       0.9981180827330296
+      ],
+      "balancedCiFarm": [
+       0.9976856007506008,
+       0.9990113070078189
+      ],
+      "any": {
+       "acc": 0.9978231106631384,
+       "balanced": 0.7617559904530208,
+       "pos": 4408
+      }
+     },
+     "C": {
+      "n": 97636303,
+      "acc": 0.9980404522281021,
+      "ci": [
+       0.9980316605340255,
+       0.9980492047303604
+      ],
+      "worst": {
+       "crop": "beans",
+       "n": 12197359,
+       "acc": 0.9975215946337236
+      },
+      "balanced": 0.9976800853174045,
+      "recallPos": 0.9973196881091618,
+      "recallNeg": 0.9980404825256471,
+      "pos": 4104,
+      "farmYears": 500,
+      "ciFarm": [
+       0.9978681010173522,
+       0.9981911867394175
+      ],
+      "balancedCiFarm": [
+       0.9967624799191964,
+       0.9984119708487456
+      ],
+      "any": {
+       "acc": 0.9979956123492304,
+       "balanced": 0.7403040811010893,
+       "pos": 8490
+      }
+     }
+    },
+    "importance": [
+     {
+      "f": "highest severity of it in the bed",
+      "v": 0.29242958120986523
+     },
+     {
+      "f": "its log-odds above the threshold",
+      "v": 0.1301913057897596
+     },
+     {
+      "f": "camera severity log-odds",
+      "v": 0.12637667347633671
+     },
+     {
+      "f": "severity grown 7 days by the forecast",
+      "v": 0.07921160436640601
+     },
+     {
+      "f": "current severity",
+      "v": 0.055730834745660575
+     },
+     {
+      "f": "pest growth rate",
+      "v": 0.040757236977019946
+     },
+     {
+      "f": "outbreak in the bed",
+      "v": 0.038389359683059454
+     },
+     {
+      "f": "pest growth per day under the forecast",
+      "v": 0.035985960477972444
+     }
+    ],
+    "oob": 0.9997832133075304,
+    "ceiling": {
+     "value": 1,
+     "kind": "upper bound",
+     "anyBound": 0.7603221415607986,
+     "text": "Ceiling close to 100%: every one of the 2,295 plants that reached 8 % in the test farms was seen by the cameras within two squares (2,221) or sat in a bed with an announced outbreak (74). The 2 it missed were yellow mite on chilli that crept from a camera reading near 4 % to just past 8 %, which hangs on a week of weather beyond the forecast. Read literally (\"any cause\"), a plant that a pest-outbreak event strikes later in the week also counts: 2,113 of 4,408 such positives had nothing to see beforehand, so balanced accuracy can't exceed 76.0% that way."
+    },
+    "before": {
+     "n": 4566668,
+     "acc": 0.9991956936654909,
+     "ci": [
+      0.9991692692104541,
+      0.9992212782484092
+     ],
+     "worst": {
+      "crop": "beans",
+      "n": 488578,
+      "acc": 0.9985938785618673
+     },
+     "balanced": 0.6226368002048797,
+     "recallPos": 0.24563359345968042,
+     "recallNeg": 0.9996400069500788,
+     "pos": 2691,
+     "farmYears": 24
+    },
+    "file": "pest_f"
+   },
+   "id": "pest",
+   "nodes": 5906,
+   "depth": 18
+  },
+  "yield": {
+   "type": "reg",
+   "nClasses": 0,
+   "F": 21,
+   "nTrees": 60,
+   "combine": "mean",
+   "cap": null,
+   "threshold": null,
+   "report": {
+    "trainRows": 8867,
+    "synthetic": 0,
+    "farmRows": 8867,
+    "sets": [
+     "D",
+     "E",
+     "G"
+    ],
+    "test": {
+     "T": {
+      "n": 7464,
+      "acc": 0.9832529474812433,
+      "ci": [
+       0.980083304135996,
+       0.9859254017797802
+      ],
+      "worst": {
+       "crop": "imported varieties",
+       "n": 310,
+       "acc": 0.9580645161290322
+      },
+      "farmYears": 200,
+      "ciFarm": [
+       0.9786496240988009,
+       0.9872594407694388
+      ]
+     },
+     "C": {
+      "n": 18727,
+      "acc": 0.9796550435200513,
+      "ci": [
+       0.9775324572656394,
+       0.9815808801724393
+      ],
+      "worst": {
+       "crop": "beans",
+       "n": 3911,
+       "acc": 0.9603681922781897
+      },
+      "farmYears": 500,
+      "ciFarm": [
+       0.9765562575527694,
+       0.9825159410427349
+      ]
+     }
+    },
+    "importance": [
+     {
+      "f": "expected yield (formula)",
+      "v": 0.3163108576825836
+     },
+     {
+      "f": "sowing-month fit",
+      "v": 0.148106822467553
+     },
+     {
+      "f": "expected heat at flowering",
+      "v": 0.12524419493680852
+     },
+     {
+      "f": "soil factor (bed average soil)",
+      "v": 0.08744465273873771
+     },
+     {
+      "f": "rain \u00f7 crop water need",
+      "v": 0.058593980608704785
+     },
+     {
+      "f": "soil factor (squares, mean)",
+      "v": 0.049232788856518224
+     },
+     {
+      "f": "expected temperature fit",
+      "v": 0.03436068493013848
+     },
+     {
+      "f": "crop Ky",
+      "v": 0.030740912520478014
+     }
+    ],
+    "oob": 0.9021260855935741,
+    "ceiling": {
+     "value": 0.9798219584569733,
+     "kind": "estimate",
+     "text": "Ceiling about 98.0%\u201399.5%: re-running 182 first-season beds of 12 new farms under up to 10 weather years each (1,685 outcomes), the best forecast for a bed, chosen from its other years, catches 98.0% (99.5% if chosen on the same outcomes); this forest catches 97.6%. A bed's yield barely moves with the weather; the misses are rare seasons far from its usual yield."
+    },
+    "before": {
+     "n": 766,
+     "acc": 0.9099216710182768,
+     "ci": [
+      0.8875489051961983,
+      0.9282033222750115
+     ],
+     "worst": {
+      "crop": "chilli",
+      "n": 51,
+      "acc": 0.7450980392156863
+     },
+     "farmYears": 24
+    },
+    "file": "yield_x1"
+   },
+   "id": "yield",
+   "nodes": 125662,
+   "depth": 14
+  },
+  "establish": {
+   "type": "reg",
+   "nClasses": 0,
+   "F": 79,
+   "nTrees": 30,
+   "combine": "median",
+   "cap": null,
+   "threshold": null,
+   "report": {
+    "trainRows": 3526080,
+    "synthetic": 3000000,
+    "farmRows": 526080,
+    "sets": [
+     "A",
+     "D",
+     "E",
+     "G"
+    ],
+    "test": {
+     "T": {
+      "n": 288062,
+      "acc": 0.9681665752511612,
+      "ci": [
+       0.9675191997775894,
+       0.9688014639355637
+      ],
+      "worst": {
+       "crop": "beans",
+       "n": 57920,
+       "acc": 0.953332182320442
+      },
+      "decision": {
+       "n": 11549,
+       "acc": 0.989263139665772,
+       "ci": [
+        0.9872140751951518,
+        0.9909868204182702
+       ],
+       "ciFarm": [
+        0.985926747217975,
+        0.9921520070386939
+       ]
+      },
+      "farmYears": 200,
+      "ciFarm": [
+       0.9612995268983009,
+       0.9746951995637947
+      ]
+     },
+     "C": {
+      "n": 725697,
+      "acc": 0.9666803087238889,
+      "ci": [
+       0.9662649077963436,
+       0.9670907687750532
+      ],
+      "worst": {
+       "crop": "tomato",
+       "n": 86533,
+       "acc": 0.9423688072758369
+      },
+      "decision": {
+       "n": 29355,
+       "acc": 0.9878044626128428,
+       "ci": [
+        0.9864834950780352,
+        0.9889977718667751
+       ],
+       "ciFarm": [
+        0.986082628316328,
+        0.9894797970421754
+       ]
+      },
+      "farmYears": 500,
+      "ciFarm": [
+       0.9622700297644404,
+       0.9708152141870635
+      ]
+     },
+     "synthetic hard cases": {
+      "n": 40008,
+      "acc": 0.96645,
+      "ci": [
+       0.9646402442419171,
+       0.9681701865581489
+      ],
+      "note": "direct-seeded 95.9% of 20,004, transplanted 97.4% of 20,004"
+     },
+     "synthetic hard cases decisions": {
+      "n": 3334,
+      "acc": 0.9859,
+      "ci": [
+       0.9813019611560808,
+       0.9893795714846533
+      ]
+     }
+    },
+    "importance": [
+     {
+      "f": "formula on all issues",
+      "v": 0.14621891814598212
+     },
+     {
+      "f": "establishment formula on the forecast",
+      "v": 0.1266308595667307
+     },
+     {
+      "f": "formula on the wettest calls",
+      "v": 0.12595066267063673
+     },
+     {
+      "f": "formula with the hourly forecast rain",
+      "v": 0.12247384724837652
+     },
+     {
+      "f": "formula, one rain hour more each day",
+      "v": 0.08794272987689368
+     },
+     {
+      "f": "heaviest day \u00b1 one rain hour, range mm",
+      "v": 0.05970209068356967
+     },
+     {
+      "f": "formula with the hourly rain and temperatures",
+      "v": 0.044247330918368084
+     },
+     {
+      "f": "formula, one rain hour fewer each day",
+      "v": 0.04338701651388155
+     }
+    ],
+    "oob": 0.9608780926037935,
+    "ceiling": {
+     "value": 0.9987567780547011,
+     "kind": "upper bound",
+     "realistic": {
+      "ceiling": 0.9036887974680321,
+      "model": 0.8358690484276302,
+      "alt": 0.8834476669157101,
+      "n": 29446,
+      "draws": 250800000
+     },
+     "text": "Upper bound 99.9% if the next three days' weather were known exactly. Most misses are days with heavy rain coming for a direct-seeded crop (an hour more or less of rain at the forecast's hourly rate moves the chance by up to about 11 points, and the forecast can't say where in the hour the rain starts and stops) and transplanted crops on hot days (about 12 points per \u00b0C over the crop's limit). With the realistic-forecast option the exact ceiling is 90.4% (29,446 square checks, 250.8 million weather draws): no predictor could reach 95 % there; these forests score 83.6% and one trained for that option 88.3%."
+    },
+    "before": {
+     "n": 32844,
+     "acc": 0.8330897576421873,
+     "ci": [
+      0.8290179687087665,
+      0.8370836359701844
+     ],
+     "worst": {
+      "crop": "var13x1",
+      "n": 72,
+      "acc": 0.2638888888888889
+     },
+     "decision": {
+      "n": 1128,
+      "acc": 0.9654255319148937,
+      "ci": [
+       0.9530853468530367,
+       0.9746063018723681
+      ]
+     },
+     "farmYears": 24
+    },
+    "file": "est_x2d_k30"
+   },
+   "id": "establish",
+   "nodes": 400784,
+   "depth": 18
+  },
+  "stress": {
+   "type": "reg",
+   "nClasses": 0,
+   "F": 33,
+   "nTrees": 25,
+   "combine": "median",
+   "cap": 72,
+   "threshold": null,
+   "report": {
+    "trainRows": 424988,
+    "synthetic": 200000,
+    "farmRows": 224988,
+    "sets": [
+     "D"
+    ],
+    "test": {
+     "T": {
+      "n": 19253454,
+      "acc": 0.9730762075209985,
+      "ci": [
+       0.9730038122436222,
+       0.9731484140146692
+      ],
+      "worst": {
+       "crop": "chilli",
+       "n": 4336971,
+       "acc": 0.9689024897791569
+      },
+      "farmYears": 200,
+      "ciFarm": [
+       0.9723384198066919,
+       0.9737932038480283
+      ]
+     },
+     "C": {
+      "n": 46311167,
+      "acc": 0.9725575691063886,
+      "ci": [
+       0.9725104774515919,
+       0.9726045823620808
+      ],
+      "worst": {
+       "crop": "chilli",
+       "n": 10668561,
+       "acc": 0.9682720096927786
+      },
+      "farmYears": 500,
+      "ciFarm": [
+       0.972068934376641,
+       0.9730451615274226
+      ]
+     },
+     "held-out farms": {
+      "n": 54489,
+      "acc": 0.9756831654095321,
+      "ci": [
+       0.9743559112336322,
+       0.9769433507964101
+      ],
+      "worst": {
+       "crop": "ragi",
+       "n": 5642,
+       "acc": 0.9693371144984049
+      }
+     },
+     "synthetic hard cases": {
+      "n": 9890,
+      "acc": 0.9791708796764409,
+      "ci": [
+       0.9761645904550021,
+       0.9818050621013922
+      ],
+      "worst": {
+       "crop": "ragi",
+       "n": 1186,
+       "acc": 0.9704890387858347
+      }
+     }
+    },
+    "importance": [
+     {
+      "f": "hours to stress with daily forecast rain",
+      "v": 0.39728298280442464
+     },
+     {
+      "f": "same, hourly rain for 24 h then daily",
+      "v": 0.313602567569961
+     },
+     {
+      "f": "hours to stress if dry (forecast ET)",
+      "v": 0.2107473891683036
+     },
+     {
+      "f": "same, rain spells filled in",
+      "v": 0.03707936818877013
+     },
+     {
+      "f": "hours to stress with hourly forecast rain",
+      "v": 0.01943243009848037
+     },
+     {
+      "f": "forecast rain before dry-weather stress mm",
+      "v": 0.015132393909390007
+     },
+     {
+      "f": "hourly forecast rain 0\u201312 h",
+      "v": 0.0011612000624399096
+     },
+     {
+      "f": "expected rain today mm",
+      "v": 0.0007955061633572198
+     }
+    ],
+    "oob": 0.9721397202668554,
+    "ceiling": {
+     "value": 0.990921730027246,
+     "kind": "upper bound",
+     "realistic": {
+      "ceiling": 0.9742033099035913,
+      "model": 0.9375,
+      "alt": 0.9558333333333333,
+      "n": 1200,
+      "draws": 196540000
+     },
+     "text": "Upper bound 99.1%: even knowing the future weather exactly, the uncertainty in the farm's soil-water estimate leaves this much. With the realistic-forecast option the exact ceiling is 97.4% (1,200 plants, each re-simulated under the weather the forecasts allow, 196.5 million draws in all); this forest scores 93.8% there and one trained for that option 95.6%."
+    },
+    "before": {
+     "n": 2023707,
+     "acc": 0.3637942646835733,
+     "ci": [
+      0.36313168342454494,
+      0.364457363059911
+     ],
+     "worst": {
+      "crop": "var5x2",
+      "n": 7904,
+      "acc": 0.3118674089068826
+     },
+     "farmYears": 24
+    },
+    "file": "stress_f"
+   },
+   "id": "stress",
+   "nodes": 86569,
+   "depth": 20
+  },
+  "spray": {
+   "type": "reg",
+   "nClasses": 0,
+   "F": 17,
+   "nTrees": 15,
+   "combine": "median",
+   "cap": null,
+   "threshold": null,
+   "report": {
+    "trainRows": 294852,
+    "synthetic": 200000,
+    "farmRows": 94852,
+    "sets": [
+     "A",
+     "D"
+    ],
+    "test": {
+     "T": {
+      "n": 197855,
+      "acc": 0.9919082156124435,
+      "ci": [
+       0.9915037864587267,
+       0.9922935431219191
+      ],
+      "worst": {
+       "crop": "paddy",
+       "n": 4660,
+       "acc": 0.9800429184549356
+      },
+      "farmYears": 200,
+      "ciFarm": [
+       0.9900239118639206,
+       0.9936340655826535
+      ]
+     },
+     "C": {
+      "n": 470249,
+      "acc": 0.994154160880725,
+      "ci": [
+       0.9939321949502893,
+       0.9943680531007798
+      ],
+      "worst": {
+       "crop": "ragi",
+       "n": 19721,
+       "acc": 0.9868667917448405
+      },
+      "farmYears": 500,
+      "ciFarm": [
+       0.9929781390655855,
+       0.9952277263218902
+      ]
+     },
+     "synthetic hard cases": {
+      "n": 20000,
+      "acc": 0.9872,
+      "ci": [
+       0.9854999999999999,
+       0.9886
+      ]
+     }
+    },
+    "importance": [
+     {
+      "f": "efficacy formula on what the farm knows",
+      "v": 0.6399709246253759
+     },
+     {
+      "f": "product base efficacy",
+      "v": 0.2284000005313943
+     },
+     {
+      "f": "pest age days",
+      "v": 0.04121182830870184
+     },
+     {
+      "f": "wind m/s",
+      "v": 0.028669946292175993
+     },
+     {
+      "f": "product UV sensitivity",
+      "v": 0.01683708824528679
+     },
+     {
+      "f": "rain next 6 h mm",
+      "v": 0.010922612731613034
+     },
+     {
+      "f": "hour (cos)",
+      "v": 0.010846111398366453
+     },
+     {
+      "f": "wettest forecast hour mm",
+      "v": 0.006392030269930155
+     }
+    ],
+    "oob": 0.9947515035055953,
+    "ceiling": {
+     "value": 1,
+     "kind": "rule",
+     "text": "Ceiling close to 100%: the outcome is the farm's own rule on conditions it measures."
+    },
+    "before": {
+     "n": 24766,
+     "acc": 0.5742550270532181,
+     "ci": [
+      0.568085756019277,
+      0.5804012653914694
+     ],
+     "worst": {
+      "crop": "ragi",
+      "n": 1071,
+      "acc": 0.35947712418300654
+     },
+     "farmYears": 24
+    },
+    "file": "spray_f_k15"
+   },
+   "id": "spray",
+   "nodes": 92109,
+   "depth": 18
+  },
+  "harvest": {
+   "type": "cls",
+   "nClasses": 2,
+   "F": 9,
+   "nTrees": 30,
+   "combine": "mean",
+   "cap": null,
+   "threshold": null,
+   "report": {
+    "trainRows": 684045,
+    "synthetic": 150000,
+    "farmRows": 534045,
+    "sets": [
+     "A",
+     "D"
+    ],
+    "test": {
+     "T": {
+      "n": 16840817,
+      "acc": 0.9992239093863439,
+      "ci": [
+       0.9992104947003526,
+       0.9992370963140104
+      ],
+      "worst": {
+       "crop": "groundnut",
+       "n": 189323,
+       "acc": 0.9936352160065074
+      },
+      "farmYears": 200,
+      "ciFarm": [
+       0.9991519391754778,
+       0.9992935358996613
+      ]
+     },
+     "C": {
+      "n": 42617784,
+      "acc": 0.9991618522445935,
+      "ci": [
+       0.9991531187526954,
+       0.9991704957468293
+      ],
+      "worst": {
+       "crop": "maize",
+       "n": 585999,
+       "acc": 0.9927491343841883
+      },
+      "farmYears": 500,
+      "ciFarm": [
+       0.9991143433608443,
+       0.9992099905063264
+      ]
+     },
+     "held-out farms": {
+      "n": 463545,
+      "acc": 0.9992708367040957,
+      "ci": [
+       0.9991888815925026,
+       0.9993445165330253
+      ],
+      "worst": {
+       "crop": "paddy",
+       "n": 4324,
+       "acc": 0.9951433857539316
+      }
+     },
+     "synthetic hard cases": {
+      "n": 20000,
+      "acc": 0.9953,
+      "ci": [
+       0.9942523013851814,
+       0.9961574607077158
+      ],
+      "worst": {
+       "crop": "brinjal",
+       "n": 2375,
+       "acc": 0.991578947368421
+      }
+     }
+    },
+    "importance": [
+     {
+      "f": "days since last pick \u00f7 interval",
+      "v": 0.41899857218466163
+     },
+     {
+      "f": "fruit load",
+      "v": 0.23764734313973684
+     },
+     {
+      "f": "progress past picking start or maturity",
+      "v": 0.10796030683974542
+     },
+     {
+      "f": "days past maturity",
+      "v": 0.07690218924512661
+     },
+     {
+      "f": "crop progress",
+      "v": 0.05557182399763006
+     },
+     {
+      "f": "rain last 2 days mm",
+      "v": 0.03788772433780832
+     },
+     {
+      "f": "humidity %",
+      "v": 0.03212766242835398
+     },
+     {
+      "f": "multi-pick crop",
+      "v": 0.01877832383322291
+     }
+    ],
+    "oob": 0.998507405956342,
+    "ceiling": {
+     "value": 1,
+     "kind": "rule",
+     "text": "Ceiling close to 100%: the outcome is the farm's own rule on conditions it measures."
+    },
+    "before": {
+     "n": 1647540,
+     "acc": 0.9835566966507642,
+     "ci": [
+      0.9833613736468452,
+      0.9837497646234556
+     ],
+     "worst": {
+      "crop": "var16x0",
+      "n": 1091,
+      "acc": 0.9156736938588451
+     },
+     "farmYears": 24
+    },
+    "file": "harvest_f"
+   },
+   "id": "harvest",
+   "nodes": 23980,
+   "depth": 18
+  },
+  "establishT": {
+   "of": "establish",
+   "type": "reg",
+   "nClasses": 0,
+   "F": 79,
+   "nTrees": 30,
+   "combine": "median",
+   "cap": null,
+   "threshold": null,
+   "id": "establishT",
+   "nodes": 214076,
+   "depth": 18
+  }
+ }
+}

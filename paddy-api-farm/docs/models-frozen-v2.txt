@@ -1,0 +1,27 @@
+# Models frozen for v2 — 2026-10-29 04:58:33 Asia, before the live set L was run
+
+# The paddy pack: awd (12 trees, 7,386 nodes, from runs/models/final/awd), plan (30 trees, 101,390 nodes, from runs/models/final/plan), harvestP (10 trees, 240 nodes, from runs/models/final/harvest/r10d8)
+# Every other check uses v1's forests (forests.npz/json, unchanged since v1).
+
+# sha256  file (relative to the project root)
+ec1fbcfd405ad71c7e540541eaadd91649e719658f5df1c85b8b9b20683a2f84  backend/paddy/core/models/paddy_forests.npz
+fa3633a449c89985d758d0f029fca3650fcab090fbeaf353abc151b487c9744d  backend/paddy/core/models/paddy_forests.json
+0cde39ea88d4e989d4fb606fdf2c5d1b60724608b13f8edd45eaad492dfe6e09  backend/paddy/core/models/forests.npz
+2a9dd4a2ac0baa66536a36bf11a1da4ba2145f9caabde72650c5859bd985043b  backend/paddy/core/models/forests.json
+69fd247643ff7c4cbe3b4655e272f836454c032d6327fe5fc2a39ad445ed9991  backend/paddy/core/rf.py
+e06c7032fd64156bd35e23017528a70c43733e9debb1244e6d4e7198c6c703e5  backend/paddy/core/forests.py
+410fdb3952e9ea746194e12c4b0d6555b8278dd5f365817a638f7775b9de34f5  backend/paddy/core/models.py
+bc05c75d1f29be0e986a921ba8d5c15309a25f7d83e4f8173482f7faac34d85d  backend/paddy/core/paddy_features.py
+1069202aa79f449d8c8faa2841c30dad9a690c0b7a51af375b53ab65ee5bb7a9  backend/paddy/core/agro.py
+16b67bac922a51bca89a5dc7c714e95963f98570aa0f489784737493460af164  backend/paddy/core/climate.py
+f5b39ed042caa90cbf0df35900514af4cf1a7693e01e09e0e637220ef0968560  backend/paddy/sim/advisor.py
+42b16df3f22650ade34df8c14ba10e8684e0802a425c20c3c7832cfc9056e7c6  backend/paddy/sim/wxpost.py
+670975fd725f93f3dba6fad1dc5408eeb14eab6d07145d060d0099e10fe614a2  backend/paddy/sim/twin.py
+9b1c13ad630264c1bf660c39858f88cb7a6c6da6d18fa475a09dcd0e73d944cc  backend/paddy/sim/audit.py
+422be61280dc85c7ad993c1909b11c1408f4c717e3f3c934e2621234b8ccf291  backend/paddy/engine.py
+c2b9b148bbe1983f3aa8eadc06e96edc88ef860ba6c1e3cb0ec7f531d0a28362  backend/paddy/modelround.py
+73231223df6424a500aa0aa337d4057409aafa8f5ae41aeb6bcf0dcc52b8648b  backend/paddy/decisions/managers.py
+673ce945c1ca8398457d85d4ba5bc41eb47b300ce8155dab4f98715ac2acf84d  backend/paddy/decisions/state.py
+1f31c07230f2a812b6a5757ca3dda3adb01ea0ca79c165d9715d4e79591168ed  backend/paddy/decisions/prompt.py
+2aa32d0b626d53988f4286d3bfaf4f74b782092f463e454e9c7a25e5bb29ec79  backend/paddy/datasets.py
+e083695bc9fac3d7254c4d07eada1247125b3e9a8df9bf9485f48c7e418c3a4c  docs/DEFINITIONS-paddy-v2.md

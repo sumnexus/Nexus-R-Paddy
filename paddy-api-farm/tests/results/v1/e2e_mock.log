@@ -1,0 +1,108 @@
+10/125 approve-cautious-faults 3.75 t/ha, 298 calls, 14.1 s
+20/125 approve-cautious-faults 3.80 t/ha, 289 calls, 18.7 s
+30/125 approve-cautious-faults 3.78 t/ha, 288 calls, 19.2 s
+40/125 approve-cautious-faults 3.89 t/ha, 291 calls, 15.0 s
+50/125 approve-cautious-faults 3.78 t/ha, 293 calls, 17.2 s
+60/125 approve-cautious-faults 3.80 t/ha, 298 calls, 16.8 s
+70/125 approve-cautious-faults 3.76 t/ha, 299 calls, 10.7 s
+80/125 approve-cautious-faults 3.78 t/ha, 294 calls, 12.0 s
+90/125 approve-cautious-faults 3.86 t/ha, 293 calls, 14.0 s
+100/125 approve-cautious-faults 3.79 t/ha, 290 calls, 14.2 s
+110/125 approve-cautious-faults 3.84 t/ha, 296 calls, 13.0 s
+120/125 approve-cautious-faults 3.74 t/ha, 287 calls, 14.2 s
+{
+ "seasons_through_http": 100,
+ "elapsed_s": 763,
+ "variants": {
+  "builtin": {
+   "seasons": 25,
+   "finished": 25,
+   "mean_yield_t_ha": 4.26,
+   "calls": 7318,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried_ok": 0,
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": 0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "feedback_seen": 0
+  },
+  "auto": {
+   "seasons": 25,
+   "finished": 25,
+   "mean_yield_t_ha": 4.26,
+   "calls": 7318,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried_ok": 0,
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": 0,
+   "tokens_in": 34333528,
+   "tokens_out": 359866,
+   "feedback_seen": 0,
+   "identical_to_builtin": 25
+  },
+  "auto-faults": {
+   "seasons": 25,
+   "finished": 25,
+   "mean_yield_t_ha": 4.26,
+   "calls": 7318,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 290,
+   "retried_ok": 843,
+   "unsafe": 584,
+   "unsafe_rejected": 584,
+   "rejected_by_person": 0,
+   "key_leaked": 0,
+   "tokens_in": 35881218,
+   "tokens_out": 390127,
+   "feedback_seen": 0,
+   "identical_to_builtin": 0
+  },
+  "approve-all": {
+   "seasons": 25,
+   "finished": 25,
+   "mean_yield_t_ha": 4.26,
+   "calls": 7318,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried_ok": 0,
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": 0,
+   "tokens_in": 34333528,
+   "tokens_out": 359866,
+   "feedback_seen": 0,
+   "identical_to_builtin": 25
+  },
+  "approve-cautious-faults": {
+   "seasons": 25,
+   "finished": 25,
+   "mean_yield_t_ha": 4.26,
+   "calls": 7340,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 293,
+   "retried_ok": 845,
+   "unsafe": 574,
+   "unsafe_rejected": 574,
+   "rejected_by_person": 1760,
+   "key_leaked": 0,
+   "tokens_in": 36207339,
+   "tokens_out": 448863,
+   "feedback_seen": 1760,
+   "identical_to_builtin": 0
+  }
+ },
+ "all_checks_passed": true
+}

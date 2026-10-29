@@ -1,0 +1,81 @@
+{
+ "machine": "two CPU cores, no GPU; Chromium with SwiftShader (software WebGL 2)",
+ "results": [
+  {
+   "setting": "desktop 1440×1000, auto",
+   "median_fps": 6,
+   "reads": [
+    4,
+    4,
+    7,
+    4,
+    7,
+    4,
+    5,
+    6,
+    6,
+    7
+   ],
+   "light_render": true,
+   "triangles": 87810,
+   "draws": 31
+  },
+  {
+   "setting": "desktop 1440×1000, high",
+   "median_fps": 2,
+   "reads": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3
+   ],
+   "light_render": false,
+   "triangles": 153246,
+   "draws": 31
+  },
+  {
+   "setting": "laptop 1280×720, high",
+   "median_fps": 2,
+   "reads": [
+    1,
+    3,
+    2,
+    1,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2
+   ],
+   "light_render": false,
+   "triangles": 153246,
+   "draws": 31
+  },
+  {
+   "setting": "phone 400×860, auto",
+   "median_fps": 7,
+   "reads": [
+    6,
+    7,
+    8,
+    7,
+    5,
+    8,
+    9,
+    6,
+    7,
+    7
+   ],
+   "light_render": true,
+   "triangles": 87810,
+   "draws": 31
+  }
+ ]
+}

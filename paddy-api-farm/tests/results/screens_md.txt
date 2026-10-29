@@ -1,0 +1,9 @@
+The screenshots are in `tests/results/screens/` (the website: every view on desktop, 1440 px, and phone, 400 px, light
+and dark, a decision's detail with the state, the raw reply and the arm plan, the soil layer, the end of a whole season
+against the stand-in, and the page shown when the backend is down), `tests/results/screens3d/` (the 3D farm) and
+`tests/results/replay-screens/` (the replay page). Three of them:
+
+| | | |
+|---|---|---|
+| ![A decision, the call behind it and its arm plan](docs/screens/decision-detail.png) | ![The charts at the end of a stand-in season, against conventional practice on the same weather](docs/screens/charts-season-end.png) | ![The fields on a phone, dark theme, plan view](docs/screens/phone-dark.png) |
+| A decision, the call behind it and its arm plan | A whole season against conventional practice | Phone, dark, plan view |

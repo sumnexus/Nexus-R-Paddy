@@ -1,0 +1,101 @@
+10/50 approve-cautious-faults 3.82 t/ha, 306 calls, 68.7 s
+20/50 approve-cautious-faults 3.75 t/ha, 299 calls, 67.4 s
+30/50 approve-cautious-faults 3.80 t/ha, 295 calls, 71.1 s
+40/50 approve-cautious-faults 3.79 t/ha, 294 calls, 79.0 s
+50/50 approve-cautious-faults 3.84 t/ha, 300 calls, 81.1 s
+{
+ "seasons_through_http": 40,
+ "elapsed_s": 3112,
+ "variants": {
+  "builtin": {
+   "seasons": 10,
+   "finished": 10,
+   "mean_yield_t_ha": 4.257,
+   "calls": 2934,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried_ok": 0,
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": 0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "feedback_seen": 0
+  },
+  "auto": {
+   "seasons": 10,
+   "finished": 10,
+   "mean_yield_t_ha": 4.257,
+   "calls": 2934,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried_ok": 0,
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": 0,
+   "tokens_in": 14991707,
+   "tokens_out": 142032,
+   "feedback_seen": 0,
+   "identical_to_builtin": 10
+  },
+  "auto-faults": {
+   "seasons": 10,
+   "finished": 10,
+   "mean_yield_t_ha": 4.257,
+   "calls": 2934,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 114,
+   "retried_ok": 353,
+   "unsafe": 240,
+   "unsafe_rejected": 240,
+   "rejected_by_person": 0,
+   "key_leaked": 0,
+   "tokens_in": 15644180,
+   "tokens_out": 154483,
+   "feedback_seen": 0,
+   "identical_to_builtin": 0
+  },
+  "approve-all": {
+   "seasons": 10,
+   "finished": 10,
+   "mean_yield_t_ha": 4.257,
+   "calls": 2934,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried_ok": 0,
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": 0,
+   "tokens_in": 14991707,
+   "tokens_out": 142032,
+   "feedback_seen": 0,
+   "identical_to_builtin": 10
+  },
+  "approve-cautious-faults": {
+   "seasons": 10,
+   "finished": 10,
+   "mean_yield_t_ha": 4.256,
+   "calls": 2933,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 128,
+   "retried_ok": 352,
+   "unsafe": 226,
+   "unsafe_rejected": 226,
+   "rejected_by_person": 664,
+   "key_leaked": 0,
+   "tokens_in": 15763053,
+   "tokens_out": 176038,
+   "feedback_seen": 664,
+   "identical_to_builtin": 0
+  }
+ },
+ "all_checks_passed": true
+}

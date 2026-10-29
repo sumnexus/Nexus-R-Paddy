@@ -1,0 +1,43 @@
+20/600 conventional kharif 4.56 t/ha 2.5s
+40/600 builtin rabi 3.82 t/ha 9.6s
+60/600 builtin-cf rabi 3.68 t/ha 10.6s
+80/600 conventional kharif 4.71 t/ha 3.6s
+100/600 builtin rabi 3.81 t/ha 9.4s
+120/600 builtin-cf rabi 3.69 t/ha 9.1s
+140/600 conventional kharif 4.44 t/ha 7.6s
+160/600 builtin rabi 3.71 t/ha 10.7s
+180/600 builtin-cf rabi 3.82 t/ha 9.2s
+200/600 conventional kharif 4.29 t/ha 3.1s
+220/600 builtin rabi 3.84 t/ha 5.9s
+240/600 builtin-cf rabi 3.79 t/ha 8.3s
+260/600 conventional kharif 4.44 t/ha 6.3s
+280/600 builtin rabi 3.75 t/ha 11.3s
+300/600 builtin-cf rabi 3.78 t/ha 11.4s
+320/600 conventional kharif 3.81 t/ha 6.2s
+340/600 builtin rabi 3.83 t/ha 7.9s
+360/600 builtin-cf rabi 3.73 t/ha 10.8s
+380/600 conventional kharif 4.27 t/ha 5.0s
+400/600 builtin rabi 3.82 t/ha 10.2s
+420/600 builtin-cf rabi 3.78 t/ha 6.3s
+440/600 conventional kharif 4.26 t/ha 5.2s
+460/600 builtin rabi 3.81 t/ha 10.3s
+480/600 builtin-cf rabi 3.83 t/ha 5.0s
+500/600 conventional kharif 4.60 t/ha 2.4s
+520/600 builtin rabi 3.73 t/ha 4.5s
+540/600 builtin-cf rabi 3.77 t/ha 3.5s
+560/600 conventional kharif 4.42 t/ha 2.6s
+580/600 builtin rabi 3.83 t/ha 4.5s
+600/600 builtin-cf rabi 3.85 t/ha 4.8s
+                     builtin      conventional  builtin-cf 
+yield t/ha           4.24 ± 0.06  3.96 ± 0.06   4.23 ± 0.06
+irrigation mm        947 ± 29     1313 ± 36     1307 ± 35  
+pump kWh             28.6 ± 0.9   39.7 ± 1.1    39.5 ± 1.1 
+N kg/ha              110 ± 2      110 ± 1       110 ± 2    
+pesticide a.i. g/ha  8.1 ± 0.8    360.5 ± 0.1   8.2 ± 0.8  
+Bt kg/ha             0.24 ± 0.02  0.00 ± 0.00   0.24 ± 0.02
+sprayed m²           20 ± 2       298 ± 3       20 ± 2     
+CH4 kg/ha            64 ± 1       113 ± 1       117 ± 1    
+calls                291 ± 1      288 ± 1       288 ± 1    
+tokens in            0 ± 0        0 ± 0         0 ± 0      
+tokens out           0 ± 0        0 ± 0         0 ± 0      
+written to /home/claude/paddy-api-farm/tests/results/campaign200.json

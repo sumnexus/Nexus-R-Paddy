@@ -1,0 +1,2121 @@
+{
+ "report": {
+  "seasons_through_http": 40,
+  "elapsed_s": 3150,
+  "variants": {
+   "builtin": {
+    "seasons": 10,
+    "finished": 10,
+    "mean_yield_t_ha": 4.237,
+    "calls": 2966,
+    "calls_failed": 0,
+    "fallbacks": 0,
+    "repaired": 0,
+    "retried_ok": 0,
+    "unsafe": 0,
+    "unsafe_rejected": 0,
+    "rejected_by_person": 0,
+    "key_leaked": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "feedback_seen": 0
+   },
+   "auto": {
+    "seasons": 10,
+    "finished": 10,
+    "mean_yield_t_ha": 4.237,
+    "calls": 2966,
+    "calls_failed": 0,
+    "fallbacks": 0,
+    "repaired": 0,
+    "retried_ok": 0,
+    "unsafe": 0,
+    "unsafe_rejected": 0,
+    "rejected_by_person": 0,
+    "key_leaked": 0,
+    "tokens_in": 15349798,
+    "tokens_out": 147558,
+    "feedback_seen": 0,
+    "identical_to_builtin": 10
+   },
+   "auto-faults": {
+    "seasons": 10,
+    "finished": 10,
+    "mean_yield_t_ha": 4.237,
+    "calls": 2966,
+    "calls_failed": 0,
+    "fallbacks": 0,
+    "repaired": 116,
+    "retried_ok": 351,
+    "unsafe": 236,
+    "unsafe_rejected": 236,
+    "rejected_by_person": 0,
+    "key_leaked": 0,
+    "tokens_in": 16019399,
+    "tokens_out": 160110,
+    "feedback_seen": 0,
+    "identical_to_builtin": 0
+   },
+   "approve-all": {
+    "seasons": 10,
+    "finished": 10,
+    "mean_yield_t_ha": 4.237,
+    "calls": 2966,
+    "calls_failed": 0,
+    "fallbacks": 0,
+    "repaired": 0,
+    "retried_ok": 0,
+    "unsafe": 0,
+    "unsafe_rejected": 0,
+    "rejected_by_person": 0,
+    "key_leaked": 0,
+    "tokens_in": 15349798,
+    "tokens_out": 147558,
+    "feedback_seen": 0,
+    "identical_to_builtin": 10
+   },
+   "approve-cautious-faults": {
+    "seasons": 10,
+    "finished": 10,
+    "mean_yield_t_ha": 4.237,
+    "calls": 2967,
+    "calls_failed": 1,
+    "fallbacks": 1,
+    "repaired": 112,
+    "retried_ok": 335,
+    "unsafe": 229,
+    "unsafe_rejected": 229,
+    "rejected_by_person": 737,
+    "key_leaked": 0,
+    "tokens_in": 16029808,
+    "tokens_out": 182660,
+    "feedback_seen": 737,
+    "identical_to_builtin": 0
+   }
+  },
+  "all_checks_passed": true
+ },
+ "results": [
+  {
+   "case": {
+    "seed": 8500000,
+    "weatherYear": 45001,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "builtin",
+   "finished": true,
+   "yield_t_ha": 4.682,
+   "calls": 294,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 192,
+   "status": {
+    "executed": 192
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "builtin"
+   ],
+   "digest": "abf85dde9ffa838f2caa9dc9b4177f52936f1da8c6f873a11bdf2cbb421afc75",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "latency_ms_mean": null,
+   "wall_s": 48.4
+  },
+  {
+   "case": {
+    "seed": 8500000,
+    "weatherYear": 45001,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "auto",
+   "finished": true,
+   "yield_t_ha": 4.682,
+   "calls": 294,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 192,
+   "status": {
+    "executed": 192
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "abf85dde9ffa838f2caa9dc9b4177f52936f1da8c6f873a11bdf2cbb421afc75",
+   "tokens_in": 1576424,
+   "tokens_out": 15393,
+   "latency_ms_mean": 7.8,
+   "wall_s": 50.9
+  },
+  {
+   "case": {
+    "seed": 8500000,
+    "weatherYear": 45001,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "auto-faults",
+   "finished": true,
+   "yield_t_ha": 4.682,
+   "calls": 294,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 12,
+   "retried": 41,
+   "decisions": 219,
+   "status": {
+    "executed": 192,
+    "rejected": 27
+   },
+   "unsafe": 27,
+   "unsafe_rejected": 27,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "e994de9fe472b73f921aeb181facf1c6702f35e90bccdc546bacefdac64b7210",
+   "tokens_in": 1649266,
+   "tokens_out": 16880,
+   "latency_ms_mean": 31.6,
+   "wall_s": 62.1
+  },
+  {
+   "case": {
+    "seed": 8500000,
+    "weatherYear": 45001,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "approve-all",
+   "finished": true,
+   "yield_t_ha": 4.682,
+   "calls": 294,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 192,
+   "status": {
+    "executed": 192
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "abf85dde9ffa838f2caa9dc9b4177f52936f1da8c6f873a11bdf2cbb421afc75",
+   "tokens_in": 1576424,
+   "tokens_out": 15393,
+   "latency_ms_mean": 8.1,
+   "wall_s": 68.6
+  },
+  {
+   "case": {
+    "seed": 8500000,
+    "weatherYear": 45001,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "approve-cautious-faults",
+   "finished": true,
+   "yield_t_ha": 4.682,
+   "calls": 295,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 17,
+   "retried": 33,
+   "decisions": 243,
+   "status": {
+    "executed": 147,
+    "rejected": 26,
+    "rejected_by_person": 70
+   },
+   "unsafe": 26,
+   "unsafe_rejected": 26,
+   "rejected_by_person": 70,
+   "key_leaked": false,
+   "feedback_seen": 70,
+   "sources": [
+    "mock"
+   ],
+   "digest": "f5b5e109d9879f85bc031a5d6875fbb26fd1e3a02c7e27cd63b2d3609dc68075",
+   "tokens_in": 1689806,
+   "tokens_out": 18548,
+   "latency_ms_mean": 19.8,
+   "wall_s": 69.6
+  },
+  {
+   "case": {
+    "seed": 8500001,
+    "weatherYear": 45002,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "storm",
+      "day": 41,
+      "hour": 8
+     },
+     {
+      "kind": "pest",
+      "day": 52,
+      "hour": 8,
+      "field": "B"
+     },
+     {
+      "kind": "cloudy",
+      "day": 84,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "builtin",
+   "finished": true,
+   "yield_t_ha": 3.803,
+   "calls": 301,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 192,
+   "status": {
+    "executed": 192
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "builtin"
+   ],
+   "digest": "7225e656455332f9d9e0c7d290d7b26976fb77eacdf5dadda50065297adf6739",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "latency_ms_mean": null,
+   "wall_s": 55.6
+  },
+  {
+   "case": {
+    "seed": 8500001,
+    "weatherYear": 45002,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "storm",
+      "day": 41,
+      "hour": 8
+     },
+     {
+      "kind": "pest",
+      "day": 52,
+      "hour": 8,
+      "field": "B"
+     },
+     {
+      "kind": "cloudy",
+      "day": 84,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "auto",
+   "finished": true,
+   "yield_t_ha": 3.803,
+   "calls": 301,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 192,
+   "status": {
+    "executed": 192
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "7225e656455332f9d9e0c7d290d7b26976fb77eacdf5dadda50065297adf6739",
+   "tokens_in": 1524748,
+   "tokens_out": 14825,
+   "latency_ms_mean": 8.0,
+   "wall_s": 60.4
+  },
+  {
+   "case": {
+    "seed": 8500001,
+    "weatherYear": 45002,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "storm",
+      "day": 41,
+      "hour": 8
+     },
+     {
+      "kind": "pest",
+      "day": 52,
+      "hour": 8,
+      "field": "B"
+     },
+     {
+      "kind": "cloudy",
+      "day": 84,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "auto-faults",
+   "finished": true,
+   "yield_t_ha": 3.803,
+   "calls": 301,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 11,
+   "retried": 28,
+   "decisions": 214,
+   "status": {
+    "executed": 192,
+    "rejected": 22
+   },
+   "unsafe": 22,
+   "unsafe_rejected": 22,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "c46750be688160d20f72b7294f7319e2681f853c5752255beff8529d018e1c58",
+   "tokens_in": 1583283,
+   "tokens_out": 16162,
+   "latency_ms_mean": 24.9,
+   "wall_s": 61.0
+  },
+  {
+   "case": {
+    "seed": 8500001,
+    "weatherYear": 45002,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "storm",
+      "day": 41,
+      "hour": 8
+     },
+     {
+      "kind": "pest",
+      "day": 52,
+      "hour": 8,
+      "field": "B"
+     },
+     {
+      "kind": "cloudy",
+      "day": 84,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "approve-all",
+   "finished": true,
+   "yield_t_ha": 3.803,
+   "calls": 301,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 192,
+   "status": {
+    "executed": 192
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "7225e656455332f9d9e0c7d290d7b26976fb77eacdf5dadda50065297adf6739",
+   "tokens_in": 1524748,
+   "tokens_out": 14825,
+   "latency_ms_mean": 8.1,
+   "wall_s": 73.2
+  },
+  {
+   "case": {
+    "seed": 8500001,
+    "weatherYear": 45002,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "storm",
+      "day": 41,
+      "hour": 8
+     },
+     {
+      "kind": "pest",
+      "day": 52,
+      "hour": 8,
+      "field": "B"
+     },
+     {
+      "kind": "cloudy",
+      "day": 84,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "approve-cautious-faults",
+   "finished": true,
+   "yield_t_ha": 3.803,
+   "calls": 301,
+   "calls_failed": 1,
+   "fallbacks": 1,
+   "repaired": 13,
+   "retried": 44,
+   "decisions": 233,
+   "status": {
+    "executed": 149,
+    "rejected": 20,
+    "rejected_by_person": 64
+   },
+   "unsafe": 20,
+   "unsafe_rejected": 20,
+   "rejected_by_person": 64,
+   "key_leaked": false,
+   "feedback_seen": 64,
+   "sources": [
+    "fallback-hold",
+    "mock"
+   ],
+   "digest": "c3e25ffc91b5ffc5a12735eb62e951b85823cf32a4ac4e83eb995d29d71a16da",
+   "tokens_in": 1598800,
+   "tokens_out": 17411,
+   "latency_ms_mean": 21.5,
+   "wall_s": 78.6
+  },
+  {
+   "case": {
+    "seed": 8500002,
+    "weatherYear": 45003,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "builtin",
+   "finished": true,
+   "yield_t_ha": 4.639,
+   "calls": 286,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 201,
+   "status": {
+    "executed": 201
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "builtin"
+   ],
+   "digest": "c6be1a134cbf77ef973fd9df2cdcd5f3cd73176f92e7b89f03ed8c4a1c4d5100",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "latency_ms_mean": null,
+   "wall_s": 57.1
+  },
+  {
+   "case": {
+    "seed": 8500002,
+    "weatherYear": 45003,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "auto",
+   "finished": true,
+   "yield_t_ha": 4.639,
+   "calls": 286,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 201,
+   "status": {
+    "executed": 201
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "c6be1a134cbf77ef973fd9df2cdcd5f3cd73176f92e7b89f03ed8c4a1c4d5100",
+   "tokens_in": 1538756,
+   "tokens_out": 15789,
+   "latency_ms_mean": 8.2,
+   "wall_s": 61.2
+  },
+  {
+   "case": {
+    "seed": 8500002,
+    "weatherYear": 45003,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "auto-faults",
+   "finished": true,
+   "yield_t_ha": 4.639,
+   "calls": 286,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 13,
+   "retried": 37,
+   "decisions": 227,
+   "status": {
+    "executed": 201,
+    "rejected": 26
+   },
+   "unsafe": 26,
+   "unsafe_rejected": 26,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "5ea7609e37cb050ff54b11df0a6c3db00faecd7100a51df549db81b227a50263",
+   "tokens_in": 1616361,
+   "tokens_out": 17167,
+   "latency_ms_mean": 31.7,
+   "wall_s": 67.0
+  },
+  {
+   "case": {
+    "seed": 8500002,
+    "weatherYear": 45003,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "approve-all",
+   "finished": true,
+   "yield_t_ha": 4.639,
+   "calls": 286,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 201,
+   "status": {
+    "executed": 201
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "c6be1a134cbf77ef973fd9df2cdcd5f3cd73176f92e7b89f03ed8c4a1c4d5100",
+   "tokens_in": 1538756,
+   "tokens_out": 15789,
+   "latency_ms_mean": 7.8,
+   "wall_s": 74.9
+  },
+  {
+   "case": {
+    "seed": 8500002,
+    "weatherYear": 45003,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "approve-cautious-faults",
+   "finished": true,
+   "yield_t_ha": 4.639,
+   "calls": 286,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 13,
+   "retried": 37,
+   "decisions": 292,
+   "status": {
+    "executed": 174,
+    "rejected": 24,
+    "rejected_by_person": 94
+   },
+   "unsafe": 24,
+   "unsafe_rejected": 24,
+   "rejected_by_person": 94,
+   "key_leaked": false,
+   "feedback_seen": 94,
+   "sources": [
+    "mock"
+   ],
+   "digest": "66e5a01efcc7bc5aa2d00e32e4b43a1022190915c1d4374b267516fe0ea03eed",
+   "tokens_in": 1619487,
+   "tokens_out": 20656,
+   "latency_ms_mean": 31.2,
+   "wall_s": 80.2
+  },
+  {
+   "case": {
+    "seed": 8500003,
+    "weatherYear": 45004,
+    "season": "rabi",
+    "events": []
+   },
+   "variant": "builtin",
+   "finished": true,
+   "yield_t_ha": 3.788,
+   "calls": 295,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 169,
+   "status": {
+    "executed": 169
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "builtin"
+   ],
+   "digest": "d104400839a9d8a9f53aa59386e21cc473eeb9fd0dc315e7209d1b41a6000156",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "latency_ms_mean": null,
+   "wall_s": 53.5
+  },
+  {
+   "case": {
+    "seed": 8500003,
+    "weatherYear": 45004,
+    "season": "rabi",
+    "events": []
+   },
+   "variant": "auto",
+   "finished": true,
+   "yield_t_ha": 3.788,
+   "calls": 295,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 169,
+   "status": {
+    "executed": 169
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "d104400839a9d8a9f53aa59386e21cc473eeb9fd0dc315e7209d1b41a6000156",
+   "tokens_in": 1476486,
+   "tokens_out": 13544,
+   "latency_ms_mean": 7.8,
+   "wall_s": 54.1
+  },
+  {
+   "case": {
+    "seed": 8500003,
+    "weatherYear": 45004,
+    "season": "rabi",
+    "events": []
+   },
+   "variant": "auto-faults",
+   "finished": true,
+   "yield_t_ha": 3.788,
+   "calls": 295,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 8,
+   "retried": 37,
+   "decisions": 201,
+   "status": {
+    "executed": 169,
+    "rejected": 32
+   },
+   "unsafe": 32,
+   "unsafe_rejected": 32,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "2c69c3a947a14da029ae197dfbfbab7a1d642dfb395731058c6cc8849726ff0a",
+   "tokens_in": 1525265,
+   "tokens_out": 14986,
+   "latency_ms_mean": 41.2,
+   "wall_s": 64.6
+  },
+  {
+   "case": {
+    "seed": 8500003,
+    "weatherYear": 45004,
+    "season": "rabi",
+    "events": []
+   },
+   "variant": "approve-all",
+   "finished": true,
+   "yield_t_ha": 3.788,
+   "calls": 295,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 169,
+   "status": {
+    "executed": 169
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "d104400839a9d8a9f53aa59386e21cc473eeb9fd0dc315e7209d1b41a6000156",
+   "tokens_in": 1476486,
+   "tokens_out": 13544,
+   "latency_ms_mean": 8.2,
+   "wall_s": 68.3
+  },
+  {
+   "case": {
+    "seed": 8500003,
+    "weatherYear": 45004,
+    "season": "rabi",
+    "events": []
+   },
+   "variant": "approve-cautious-faults",
+   "finished": true,
+   "yield_t_ha": 3.788,
+   "calls": 296,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 15,
+   "retried": 37,
+   "decisions": 231,
+   "status": {
+    "executed": 143,
+    "rejected": 16,
+    "rejected_by_person": 72
+   },
+   "unsafe": 16,
+   "unsafe_rejected": 16,
+   "rejected_by_person": 72,
+   "key_leaked": false,
+   "feedback_seen": 72,
+   "sources": [
+    "mock"
+   ],
+   "digest": "7f62d5792f297d0602ef48431ef7fa9e411f5dc20cbeb623417994f80df3318e",
+   "tokens_in": 1568064,
+   "tokens_out": 17042,
+   "latency_ms_mean": 25.5,
+   "wall_s": 73.5
+  },
+  {
+   "case": {
+    "seed": 8500004,
+    "weatherYear": 45005,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "builtin",
+   "finished": true,
+   "yield_t_ha": 4.796,
+   "calls": 309,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 211,
+   "status": {
+    "executed": 211
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "builtin"
+   ],
+   "digest": "60557959528c55e8426225fa812a80272fe6a850f6321348f512c5b6b59514fa",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "latency_ms_mean": null,
+   "wall_s": 56.6
+  },
+  {
+   "case": {
+    "seed": 8500004,
+    "weatherYear": 45005,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "auto",
+   "finished": true,
+   "yield_t_ha": 4.796,
+   "calls": 309,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 211,
+   "status": {
+    "executed": 211
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "60557959528c55e8426225fa812a80272fe6a850f6321348f512c5b6b59514fa",
+   "tokens_in": 1670396,
+   "tokens_out": 16428,
+   "latency_ms_mean": 8.2,
+   "wall_s": 60.0
+  },
+  {
+   "case": {
+    "seed": 8500004,
+    "weatherYear": 45005,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "auto-faults",
+   "finished": true,
+   "yield_t_ha": 4.796,
+   "calls": 309,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 12,
+   "retried": 38,
+   "decisions": 230,
+   "status": {
+    "executed": 211,
+    "rejected": 19
+   },
+   "unsafe": 19,
+   "unsafe_rejected": 19,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "43b304cbe3f7994e8e9ac7d249569c631e89e8014c5b7ee7b34256516c24877e",
+   "tokens_in": 1738936,
+   "tokens_out": 17516,
+   "latency_ms_mean": 20.1,
+   "wall_s": 62.1
+  },
+  {
+   "case": {
+    "seed": 8500004,
+    "weatherYear": 45005,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "approve-all",
+   "finished": true,
+   "yield_t_ha": 4.796,
+   "calls": 309,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 211,
+   "status": {
+    "executed": 211
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "60557959528c55e8426225fa812a80272fe6a850f6321348f512c5b6b59514fa",
+   "tokens_in": 1670396,
+   "tokens_out": 16428,
+   "latency_ms_mean": 7.6,
+   "wall_s": 69.6
+  },
+  {
+   "case": {
+    "seed": 8500004,
+    "weatherYear": 45005,
+    "season": "kharif",
+    "events": []
+   },
+   "variant": "approve-cautious-faults",
+   "finished": true,
+   "yield_t_ha": 4.798,
+   "calls": 306,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 14,
+   "retried": 32,
+   "decisions": 289,
+   "status": {
+    "executed": 178,
+    "rejected": 25,
+    "rejected_by_person": 86
+   },
+   "unsafe": 25,
+   "unsafe_rejected": 25,
+   "rejected_by_person": 86,
+   "key_leaked": false,
+   "feedback_seen": 86,
+   "sources": [
+    "mock"
+   ],
+   "digest": "11b8e85c69990f2735071ad721a8edb39059646c61fd83e3719cabb300cf11ce",
+   "tokens_in": 1719872,
+   "tokens_out": 20756,
+   "latency_ms_mean": 44.5,
+   "wall_s": 87.2
+  },
+  {
+   "case": {
+    "seed": 8500005,
+    "weatherYear": 45006,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "storm",
+      "day": 86,
+      "hour": 8
+     },
+     {
+      "kind": "cloudy",
+      "day": 101,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "builtin",
+   "finished": true,
+   "yield_t_ha": 3.806,
+   "calls": 297,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 148,
+   "status": {
+    "executed": 148
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "builtin"
+   ],
+   "digest": "f4cc84b54c1a632377b179a8c6d1a50cf70bf52de21aa09205dde8c4b68d3ae8",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "latency_ms_mean": null,
+   "wall_s": 48.9
+  },
+  {
+   "case": {
+    "seed": 8500005,
+    "weatherYear": 45006,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "storm",
+      "day": 86,
+      "hour": 8
+     },
+     {
+      "kind": "cloudy",
+      "day": 101,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "auto",
+   "finished": true,
+   "yield_t_ha": 3.806,
+   "calls": 297,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 148,
+   "status": {
+    "executed": 148
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "f4cc84b54c1a632377b179a8c6d1a50cf70bf52de21aa09205dde8c4b68d3ae8",
+   "tokens_in": 1424729,
+   "tokens_out": 12487,
+   "latency_ms_mean": 7.1,
+   "wall_s": 53.8
+  },
+  {
+   "case": {
+    "seed": 8500005,
+    "weatherYear": 45006,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "storm",
+      "day": 86,
+      "hour": 8
+     },
+     {
+      "kind": "cloudy",
+      "day": 101,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "auto-faults",
+   "finished": true,
+   "yield_t_ha": 3.806,
+   "calls": 297,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 13,
+   "retried": 32,
+   "decisions": 167,
+   "status": {
+    "executed": 148,
+    "rejected": 19
+   },
+   "unsafe": 19,
+   "unsafe_rejected": 19,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "4b3374ba3f8506f33e83ee9a1284cb30fa68828d618b38617557cd1671582690",
+   "tokens_in": 1498733,
+   "tokens_out": 13670,
+   "latency_ms_mean": 27.6,
+   "wall_s": 59.5
+  },
+  {
+   "case": {
+    "seed": 8500005,
+    "weatherYear": 45006,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "storm",
+      "day": 86,
+      "hour": 8
+     },
+     {
+      "kind": "cloudy",
+      "day": 101,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "approve-all",
+   "finished": true,
+   "yield_t_ha": 3.806,
+   "calls": 297,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 148,
+   "status": {
+    "executed": 148
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "f4cc84b54c1a632377b179a8c6d1a50cf70bf52de21aa09205dde8c4b68d3ae8",
+   "tokens_in": 1424729,
+   "tokens_out": 12487,
+   "latency_ms_mean": 7.2,
+   "wall_s": 64.1
+  },
+  {
+   "case": {
+    "seed": 8500005,
+    "weatherYear": 45006,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "storm",
+      "day": 86,
+      "hour": 8
+     },
+     {
+      "kind": "cloudy",
+      "day": 101,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "approve-cautious-faults",
+   "finished": true,
+   "yield_t_ha": 3.806,
+   "calls": 297,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 9,
+   "retried": 34,
+   "decisions": 182,
+   "status": {
+    "executed": 121,
+    "rejected": 20,
+    "rejected_by_person": 41
+   },
+   "unsafe": 20,
+   "unsafe_rejected": 20,
+   "rejected_by_person": 41,
+   "key_leaked": false,
+   "feedback_seen": 41,
+   "sources": [
+    "mock"
+   ],
+   "digest": "0395f6cfa7950bc203820102f2ce421bd076e5d7992fcd453dbb3b67bd8db17c",
+   "tokens_in": 1478132,
+   "tokens_out": 14353,
+   "latency_ms_mean": 14.8,
+   "wall_s": 63.7
+  },
+  {
+   "case": {
+    "seed": 8500006,
+    "weatherYear": 45007,
+    "season": "kharif",
+    "events": [
+     {
+      "kind": "dry",
+      "day": 61,
+      "hour": 8
+     },
+     {
+      "kind": "cloudy",
+      "day": 115,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "builtin",
+   "finished": true,
+   "yield_t_ha": 4.581,
+   "calls": 289,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 201,
+   "status": {
+    "executed": 201
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "builtin"
+   ],
+   "digest": "9c8296cfed1427183b3481fdf34e2d9639878aff8c9a43a44517655de8764b65",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "latency_ms_mean": null,
+   "wall_s": 51.2
+  },
+  {
+   "case": {
+    "seed": 8500006,
+    "weatherYear": 45007,
+    "season": "kharif",
+    "events": [
+     {
+      "kind": "dry",
+      "day": 61,
+      "hour": 8
+     },
+     {
+      "kind": "cloudy",
+      "day": 115,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "auto",
+   "finished": true,
+   "yield_t_ha": 4.581,
+   "calls": 289,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 201,
+   "status": {
+    "executed": 201
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "9c8296cfed1427183b3481fdf34e2d9639878aff8c9a43a44517655de8764b65",
+   "tokens_in": 1575169,
+   "tokens_out": 15966,
+   "latency_ms_mean": 8.3,
+   "wall_s": 55.9
+  },
+  {
+   "case": {
+    "seed": 8500006,
+    "weatherYear": 45007,
+    "season": "kharif",
+    "events": [
+     {
+      "kind": "dry",
+      "day": 61,
+      "hour": 8
+     },
+     {
+      "kind": "cloudy",
+      "day": 115,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "auto-faults",
+   "finished": true,
+   "yield_t_ha": 4.581,
+   "calls": 289,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 11,
+   "retried": 34,
+   "decisions": 219,
+   "status": {
+    "executed": 201,
+    "rejected": 18
+   },
+   "unsafe": 18,
+   "unsafe_rejected": 18,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "2e94a5671a0e1a19b79b257c71db77d5c717f1761ddfe019cb4eb0c173286453",
+   "tokens_in": 1639524,
+   "tokens_out": 16957,
+   "latency_ms_mean": 26.5,
+   "wall_s": 60.9
+  },
+  {
+   "case": {
+    "seed": 8500006,
+    "weatherYear": 45007,
+    "season": "kharif",
+    "events": [
+     {
+      "kind": "dry",
+      "day": 61,
+      "hour": 8
+     },
+     {
+      "kind": "cloudy",
+      "day": 115,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "approve-all",
+   "finished": true,
+   "yield_t_ha": 4.581,
+   "calls": 289,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 201,
+   "status": {
+    "executed": 201
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "9c8296cfed1427183b3481fdf34e2d9639878aff8c9a43a44517655de8764b65",
+   "tokens_in": 1575169,
+   "tokens_out": 15966,
+   "latency_ms_mean": 7.7,
+   "wall_s": 66.9
+  },
+  {
+   "case": {
+    "seed": 8500006,
+    "weatherYear": 45007,
+    "season": "kharif",
+    "events": [
+     {
+      "kind": "dry",
+      "day": 61,
+      "hour": 8
+     },
+     {
+      "kind": "cloudy",
+      "day": 115,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "approve-cautious-faults",
+   "finished": true,
+   "yield_t_ha": 4.581,
+   "calls": 289,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 6,
+   "retried": 30,
+   "decisions": 293,
+   "status": {
+    "executed": 171,
+    "rejected_by_person": 98,
+    "rejected": 24
+   },
+   "unsafe": 24,
+   "unsafe_rejected": 24,
+   "rejected_by_person": 98,
+   "key_leaked": false,
+   "feedback_seen": 98,
+   "sources": [
+    "mock"
+   ],
+   "digest": "c4284a73681c3155faccc088412d7e9fc20c92518b1a76ecce1d2cf655a3b458",
+   "tokens_in": 1619649,
+   "tokens_out": 20723,
+   "latency_ms_mean": 15.1,
+   "wall_s": 73.1
+  },
+  {
+   "case": {
+    "seed": 8500007,
+    "weatherYear": 45008,
+    "season": "rabi",
+    "events": []
+   },
+   "variant": "builtin",
+   "finished": true,
+   "yield_t_ha": 3.692,
+   "calls": 297,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 192,
+   "status": {
+    "executed": 192
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "builtin"
+   ],
+   "digest": "5ef94fe0674922a3c3738c28d2edbfcc390873f4bf089d5723abb01b75a365af",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "latency_ms_mean": null,
+   "wall_s": 55.5
+  },
+  {
+   "case": {
+    "seed": 8500007,
+    "weatherYear": 45008,
+    "season": "rabi",
+    "events": []
+   },
+   "variant": "auto",
+   "finished": true,
+   "yield_t_ha": 3.692,
+   "calls": 297,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 192,
+   "status": {
+    "executed": 192
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "5ef94fe0674922a3c3738c28d2edbfcc390873f4bf089d5723abb01b75a365af",
+   "tokens_in": 1477920,
+   "tokens_out": 14664,
+   "latency_ms_mean": 7.9,
+   "wall_s": 57.2
+  },
+  {
+   "case": {
+    "seed": 8500007,
+    "weatherYear": 45008,
+    "season": "rabi",
+    "events": []
+   },
+   "variant": "auto-faults",
+   "finished": true,
+   "yield_t_ha": 3.692,
+   "calls": 297,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 13,
+   "retried": 30,
+   "decisions": 217,
+   "status": {
+    "executed": 192,
+    "rejected": 25
+   },
+   "unsafe": 25,
+   "unsafe_rejected": 25,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "e7d6200dd5e980cc299d48653376cd7084134a0e41a6f47ca230bab2b203fcdb",
+   "tokens_in": 1549283,
+   "tokens_out": 15886,
+   "latency_ms_mean": 24.5,
+   "wall_s": 62.2
+  },
+  {
+   "case": {
+    "seed": 8500007,
+    "weatherYear": 45008,
+    "season": "rabi",
+    "events": []
+   },
+   "variant": "approve-all",
+   "finished": true,
+   "yield_t_ha": 3.692,
+   "calls": 297,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 192,
+   "status": {
+    "executed": 192
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "5ef94fe0674922a3c3738c28d2edbfcc390873f4bf089d5723abb01b75a365af",
+   "tokens_in": 1477920,
+   "tokens_out": 14664,
+   "latency_ms_mean": 8.1,
+   "wall_s": 76.4
+  },
+  {
+   "case": {
+    "seed": 8500007,
+    "weatherYear": 45008,
+    "season": "rabi",
+    "events": []
+   },
+   "variant": "approve-cautious-faults",
+   "finished": true,
+   "yield_t_ha": 3.694,
+   "calls": 299,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 6,
+   "retried": 28,
+   "decisions": 255,
+   "status": {
+    "executed": 155,
+    "rejected": 20,
+    "rejected_by_person": 80
+   },
+   "unsafe": 20,
+   "unsafe_rejected": 20,
+   "rejected_by_person": 80,
+   "key_leaked": false,
+   "feedback_seen": 80,
+   "sources": [
+    "mock"
+   ],
+   "digest": "7374be84904770d279f647792cd4c5637377e6643d8a443ec3a5c34f87dabf86",
+   "tokens_in": 1527734,
+   "tokens_out": 17951,
+   "latency_ms_mean": 40.8,
+   "wall_s": 82.6
+  },
+  {
+   "case": {
+    "seed": 8500008,
+    "weatherYear": 45009,
+    "season": "kharif",
+    "events": [
+     {
+      "kind": "pest",
+      "day": 51,
+      "hour": 8,
+      "field": "A"
+     },
+     {
+      "kind": "cloudy",
+      "day": 62,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "builtin",
+   "finished": true,
+   "yield_t_ha": 4.702,
+   "calls": 304,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 217,
+   "status": {
+    "executed": 217
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "builtin"
+   ],
+   "digest": "9b78abb52f267c6b9580b2e57f83b6ec71f814e239685e3a3d4d031975c57d74",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "latency_ms_mean": null,
+   "wall_s": 53.2
+  },
+  {
+   "case": {
+    "seed": 8500008,
+    "weatherYear": 45009,
+    "season": "kharif",
+    "events": [
+     {
+      "kind": "pest",
+      "day": 51,
+      "hour": 8,
+      "field": "A"
+     },
+     {
+      "kind": "cloudy",
+      "day": 62,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "auto",
+   "finished": true,
+   "yield_t_ha": 4.702,
+   "calls": 304,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 217,
+   "status": {
+    "executed": 217
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "9b78abb52f267c6b9580b2e57f83b6ec71f814e239685e3a3d4d031975c57d74",
+   "tokens_in": 1645951,
+   "tokens_out": 16672,
+   "latency_ms_mean": 7.9,
+   "wall_s": 59.0
+  },
+  {
+   "case": {
+    "seed": 8500008,
+    "weatherYear": 45009,
+    "season": "kharif",
+    "events": [
+     {
+      "kind": "pest",
+      "day": 51,
+      "hour": 8,
+      "field": "A"
+     },
+     {
+      "kind": "cloudy",
+      "day": 62,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "auto-faults",
+   "finished": true,
+   "yield_t_ha": 4.702,
+   "calls": 304,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 13,
+   "retried": 38,
+   "decisions": 238,
+   "status": {
+    "executed": 217,
+    "rejected": 21
+   },
+   "unsafe": 21,
+   "unsafe_rejected": 21,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "e61e0df25b231b519275d5b63fa562510c7e956302d92e0a58c85ebf0834b662",
+   "tokens_in": 1720702,
+   "tokens_out": 17842,
+   "latency_ms_mean": 30.1,
+   "wall_s": 64.4
+  },
+  {
+   "case": {
+    "seed": 8500008,
+    "weatherYear": 45009,
+    "season": "kharif",
+    "events": [
+     {
+      "kind": "pest",
+      "day": 51,
+      "hour": 8,
+      "field": "A"
+     },
+     {
+      "kind": "cloudy",
+      "day": 62,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "approve-all",
+   "finished": true,
+   "yield_t_ha": 4.702,
+   "calls": 304,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 217,
+   "status": {
+    "executed": 217
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "9b78abb52f267c6b9580b2e57f83b6ec71f814e239685e3a3d4d031975c57d74",
+   "tokens_in": 1645951,
+   "tokens_out": 16672,
+   "latency_ms_mean": 7.8,
+   "wall_s": 73.8
+  },
+  {
+   "case": {
+    "seed": 8500008,
+    "weatherYear": 45009,
+    "season": "kharif",
+    "events": [
+     {
+      "kind": "pest",
+      "day": 51,
+      "hour": 8,
+      "field": "A"
+     },
+     {
+      "kind": "cloudy",
+      "day": 62,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "approve-cautious-faults",
+   "finished": true,
+   "yield_t_ha": 4.702,
+   "calls": 304,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 9,
+   "retried": 31,
+   "decisions": 286,
+   "status": {
+    "executed": 175,
+    "rejected_by_person": 87,
+    "rejected": 24
+   },
+   "unsafe": 24,
+   "unsafe_rejected": 24,
+   "rejected_by_person": 87,
+   "key_leaked": false,
+   "feedback_seen": 87,
+   "sources": [
+    "mock"
+   ],
+   "digest": "172326f0d6e9ee34076fbf8cbba2c0d47faa4280dfad1a8bd465eefb51568ef4",
+   "tokens_in": 1707323,
+   "tokens_out": 20370,
+   "latency_ms_mean": 19.7,
+   "wall_s": 75.5
+  },
+  {
+   "case": {
+    "seed": 8500009,
+    "weatherYear": 45010,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "pest",
+      "day": 37,
+      "hour": 8,
+      "field": "A"
+     },
+     {
+      "kind": "dry",
+      "day": 60,
+      "hour": 8
+     },
+     {
+      "kind": "storm",
+      "day": 78,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "builtin",
+   "finished": true,
+   "yield_t_ha": 3.879,
+   "calls": 294,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 133,
+   "status": {
+    "executed": 133
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "builtin"
+   ],
+   "digest": "065428c8481e16b756ea9dd4325dffac32ce4bd44fe698499148b3c7cf1674d7",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "latency_ms_mean": null,
+   "wall_s": 46.0
+  },
+  {
+   "case": {
+    "seed": 8500009,
+    "weatherYear": 45010,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "pest",
+      "day": 37,
+      "hour": 8,
+      "field": "A"
+     },
+     {
+      "kind": "dry",
+      "day": 60,
+      "hour": 8
+     },
+     {
+      "kind": "storm",
+      "day": 78,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "auto",
+   "finished": true,
+   "yield_t_ha": 3.879,
+   "calls": 294,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 133,
+   "status": {
+    "executed": 133
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "065428c8481e16b756ea9dd4325dffac32ce4bd44fe698499148b3c7cf1674d7",
+   "tokens_in": 1439219,
+   "tokens_out": 11790,
+   "latency_ms_mean": 7.8,
+   "wall_s": 50.4
+  },
+  {
+   "case": {
+    "seed": 8500009,
+    "weatherYear": 45010,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "pest",
+      "day": 37,
+      "hour": 8,
+      "field": "A"
+     },
+     {
+      "kind": "dry",
+      "day": 60,
+      "hour": 8
+     },
+     {
+      "kind": "storm",
+      "day": 78,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "auto-faults",
+   "finished": true,
+   "yield_t_ha": 3.879,
+   "calls": 294,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 10,
+   "retried": 36,
+   "decisions": 160,
+   "status": {
+    "executed": 133,
+    "rejected": 27
+   },
+   "unsafe": 27,
+   "unsafe_rejected": 27,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "88d241bf29fd664895e3d65bfcb2581a4b95680de41d91cb336913c7305b1ce5",
+   "tokens_in": 1498046,
+   "tokens_out": 13044,
+   "latency_ms_mean": 30.5,
+   "wall_s": 56.3
+  },
+  {
+   "case": {
+    "seed": 8500009,
+    "weatherYear": 45010,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "pest",
+      "day": 37,
+      "hour": 8,
+      "field": "A"
+     },
+     {
+      "kind": "dry",
+      "day": 60,
+      "hour": 8
+     },
+     {
+      "kind": "storm",
+      "day": 78,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "approve-all",
+   "finished": true,
+   "yield_t_ha": 3.879,
+   "calls": 294,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 0,
+   "retried": 0,
+   "decisions": 133,
+   "status": {
+    "executed": 133
+   },
+   "unsafe": 0,
+   "unsafe_rejected": 0,
+   "rejected_by_person": 0,
+   "key_leaked": false,
+   "feedback_seen": 0,
+   "sources": [
+    "mock"
+   ],
+   "digest": "065428c8481e16b756ea9dd4325dffac32ce4bd44fe698499148b3c7cf1674d7",
+   "tokens_in": 1439219,
+   "tokens_out": 11790,
+   "latency_ms_mean": 7.8,
+   "wall_s": 63.9
+  },
+  {
+   "case": {
+    "seed": 8500009,
+    "weatherYear": 45010,
+    "season": "rabi",
+    "events": [
+     {
+      "kind": "pest",
+      "day": 37,
+      "hour": 8,
+      "field": "A"
+     },
+     {
+      "kind": "dry",
+      "day": 60,
+      "hour": 8
+     },
+     {
+      "kind": "storm",
+      "day": 78,
+      "hour": 8
+     }
+    ]
+   },
+   "variant": "approve-cautious-faults",
+   "finished": true,
+   "yield_t_ha": 3.879,
+   "calls": 294,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "repaired": 10,
+   "retried": 29,
+   "decisions": 196,
+   "status": {
+    "executed": 121,
+    "rejected": 30,
+    "rejected_by_person": 45
+   },
+   "unsafe": 30,
+   "unsafe_rejected": 30,
+   "rejected_by_person": 45,
+   "key_leaked": false,
+   "feedback_seen": 45,
+   "sources": [
+    "mock"
+   ],
+   "digest": "72e13d162253c5b11f6579285a3f5d263693cd978b3c74b8f73bfead9e9d9559",
+   "tokens_in": 1500941,
+   "tokens_out": 14850,
+   "latency_ms_mean": 34.0,
+   "wall_s": 56.1
+  }
+ ]
+}

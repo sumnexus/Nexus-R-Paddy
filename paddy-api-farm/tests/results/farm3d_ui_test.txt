@@ -1,0 +1,44 @@
+ok   desktop-light: the 3D farm renders (153246 triangles in 31 draws)
+ok   desktop-light: all 7 camera presets screenshotted
+ok   desktop-light: clicking square A3,3 in 3D opens its panel
+ok   desktop-light: clicking the harvest arm opens the arm panel
+ok   desktop-light: "Show on the farm" highlights decision d00085
+ok   desktop-light: the plan view shows the 72 squares
+ok   desktop-light: no sideways scrolling (0px)
+ok   desktop-light: no console errors
+ok   desktop-dark: the 3D farm renders (153246 triangles in 31 draws)
+ok   desktop-dark: all 7 camera presets screenshotted
+ok   desktop-dark: clicking square A3,3 in 3D opens its panel
+ok   desktop-dark: clicking the harvest arm opens the arm panel
+ok   desktop-dark: "Show on the farm" highlights decision d00085
+ok   desktop-dark: the plan view shows the 72 squares
+ok   desktop-dark: no sideways scrolling (0px)
+ok   desktop-dark: no console errors
+ok   phone-light: the 3D farm renders (87810 triangles in 31 draws, light mode)
+ok   phone-light: phones get the lighter render
+ok   phone-light: all 7 camera presets screenshotted
+ok   phone-light: clicking square A3,3 in 3D opens its panel
+ok   phone-light: clicking the harvest arm opens the arm panel
+ok   phone-light: "Show on the farm" highlights decision d00085
+ok   phone-light: the plan view shows the 72 squares
+ok   phone-light: no sideways scrolling (0px)
+ok   phone-light: no console errors
+ok   phone-dark: the 3D farm renders (87810 triangles in 31 draws, light mode)
+ok   phone-dark: phones get the lighter render
+ok   phone-dark: all 7 camera presets screenshotted
+ok   phone-dark: clicking square A3,3 in 3D opens its panel
+ok   phone-dark: clicking the harvest arm opens the arm panel
+ok   phone-dark: "Show on the farm" highlights decision d00085
+ok   phone-dark: the plan view shows the 72 squares
+ok   phone-dark: no sideways scrolling (0px)
+ok   phone-dark: no console errors
+ok   no WebGL 2: the plan is shown with a note ("The 3D farm needs WebGL 2, which this browser doesn't provide, so the …")
+ok   no WebGL 2: no 3D canvas
+ok   no WebGL 2: no console errors
+ok   prefers-reduced-motion: the 3D view turns off sway, blinking, bobbing and camera easing
+ok   approve mode: decision d00001's planned path is drawn before approval (3D shows d00001)
+ok   approve mode: after approval the arm sets off
+ok   live: the arm slow-down control reaches the server ("don't slow down" → work rate 3600)
+ok   live: no console errors
+frame rates (software WebGL in this container): desktop-light: median 1 fps (1, 1, 1, 1, 1, 1; software rendering); desktop-dark: median 1 fps (1, 1, 1, 1, 1, 1; software rendering); phone-light: median 6 fps (5, 5, 5, 6, 8, 9; software rendering · light mode); phone-dark: median 6 fps (5, 5, 6, 6, 6, 6; software rendering · light mode)
+all checks passed

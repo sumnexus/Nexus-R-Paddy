@@ -1,0 +1,8 @@
+  11 kharif: 89 snapshots so far
+  11 rabi: 186 snapshots so far
+  12 kharif: 275 snapshots so far
+  12 rabi: 372 snapshots so far
+  1000/3000: 528 executed, 852 rejected, 0 crashes, 0 violations
+  2000/3000: 1029 executed, 1601 rejected, 0 crashes, 0 violations
+  3000/3000: 1555 executed, 2446 rejected, 0 crashes, 0 violations
+chunk 0: 3000 replies, 0 crashes, 0 violations, 2388.2 s

@@ -1,0 +1,177 @@
+{
+ "repeat": [
+  {
+   "case": {
+    "seed": 20261024,
+    "weatherYear": 0,
+    "season": "kharif"
+   },
+   "manager": "builtin",
+   "identical": true,
+   "decision_digest": "2cec7e530f634928",
+   "history_digest": "49484ffa573741ed",
+   "yield_t_ha": 4.809,
+   "decisions": 191
+  },
+  {
+   "case": {
+    "seed": 20261024,
+    "weatherYear": 0,
+    "season": "kharif"
+   },
+   "manager": "conventional",
+   "identical": true,
+   "decision_digest": "66266df1c4e8bb61",
+   "history_digest": "cd4f56f6a92c598e",
+   "yield_t_ha": 4.077,
+   "decisions": 110
+  },
+  {
+   "case": {
+    "seed": 20261024,
+    "weatherYear": 0,
+    "season": "kharif"
+   },
+   "manager": "api",
+   "identical": true,
+   "decision_digest": "2cec7e530f634928",
+   "history_digest": "49484ffa573741ed",
+   "yield_t_ha": 4.809,
+   "decisions": 191
+  },
+  {
+   "case": {
+    "seed": 7400011,
+    "weatherYear": 6001,
+    "season": "rabi"
+   },
+   "manager": "builtin",
+   "identical": true,
+   "decision_digest": "58cd254bd0ab8769",
+   "history_digest": "7d14beb5102054f1",
+   "yield_t_ha": 3.72,
+   "decisions": 179
+  },
+  {
+   "case": {
+    "seed": 7400011,
+    "weatherYear": 6001,
+    "season": "rabi"
+   },
+   "manager": "conventional",
+   "identical": true,
+   "decision_digest": "1627605136a1b6d9",
+   "history_digest": "b355ed24b01b50d1",
+   "yield_t_ha": 3.636,
+   "decisions": 153
+  },
+  {
+   "case": {
+    "seed": 7400011,
+    "weatherYear": 6001,
+    "season": "rabi"
+   },
+   "manager": "api",
+   "identical": true,
+   "decision_digest": "58cd254bd0ab8769",
+   "history_digest": "7d14beb5102054f1",
+   "yield_t_ha": 3.72,
+   "decisions": 179
+  },
+  {
+   "case": {
+    "seed": 7400012,
+    "weatherYear": 6002,
+    "season": "kharif"
+   },
+   "manager": "builtin",
+   "identical": true,
+   "decision_digest": "2a82a52d855e4c97",
+   "history_digest": "24c22fc216956a17",
+   "yield_t_ha": 4.565,
+   "decisions": 203
+  },
+  {
+   "case": {
+    "seed": 7400012,
+    "weatherYear": 6002,
+    "season": "kharif"
+   },
+   "manager": "conventional",
+   "identical": true,
+   "decision_digest": "12bae8a644b83291",
+   "history_digest": "e9e42e7e495811b9",
+   "yield_t_ha": 3.533,
+   "decisions": 126
+  },
+  {
+   "case": {
+    "seed": 7400012,
+    "weatherYear": 6002,
+    "season": "kharif"
+   },
+   "manager": "api",
+   "identical": true,
+   "decision_digest": "2a82a52d855e4c97",
+   "history_digest": "24c22fc216956a17",
+   "yield_t_ha": 4.565,
+   "decisions": 203
+  }
+ ],
+ "api_equals_builtin": [
+  {
+   "case": {
+    "seed": 20261024,
+    "weatherYear": 0,
+    "season": "kharif"
+   },
+   "identical": true
+  },
+  {
+   "case": {
+    "seed": 7400011,
+    "weatherYear": 6001,
+    "season": "rabi"
+   },
+   "identical": true
+  },
+  {
+   "case": {
+    "seed": 7400012,
+    "weatherYear": 6002,
+    "season": "kharif"
+   },
+   "identical": true
+  }
+ ],
+ "replay": [
+  {
+   "case": {
+    "seed": 20261024,
+    "weatherYear": 0,
+    "season": "kharif"
+   },
+   "faults": null,
+   "calls": 289,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "retried_or_repaired": 0,
+   "identical": true
+  },
+  {
+   "case": {
+    "seed": 7400011,
+    "weatherYear": 6001,
+    "season": "rabi"
+   },
+   "faults": "p429=0.06,p500=0.05,ptimeout=0.02,pmalformed=0.06,punsafe=0.1",
+   "calls": 295,
+   "calls_failed": 0,
+   "fallbacks": 0,
+   "retried_or_repaired": 57,
+   "identical": true
+  }
+ ],
+ "all_identical": true,
+ "seconds": 426
+}

@@ -1,0 +1,64 @@
+Cost estimate if this used the real decision API: 10 season(s) × 2 API decision maker(s) × about 300 calls = 6,000 calls; about 4,600 input tokens per call (instructions ≈ 2,400 + state ≈ 2,200) = 27.6 million, and about 300 output tokens per call (assumed) = 1.80 million. At US$3 / US$15 per million input / output tokens (API_PRICE_IN_PER_M / API_PRICE_OUT_PER_M) ≈ US$109.80.
+Running against the stand-in mock: nothing is spent.
+
+  1/40 api            kharif seed 5100: 4.62 t/ha, 623 mm
+  2/40 api-no-advice  kharif seed 5100: 4.61 t/ha, 618 mm
+  3/40 builtin        kharif seed 5100: 4.62 t/ha, 623 mm
+  4/40 conventional   kharif seed 5100: 4.32 t/ha, 943 mm
+  5/40 api            rabi   seed 5101: 3.86 t/ha, 1116 mm
+  6/40 api-no-advice  rabi   seed 5101: 3.85 t/ha, 1116 mm
+  7/40 builtin        rabi   seed 5101: 3.86 t/ha, 1116 mm
+  8/40 conventional   rabi   seed 5101: 3.81 t/ha, 1543 mm
+  9/40 api            kharif seed 5102: 4.74 t/ha, 709 mm
+  10/40 api-no-advice  kharif seed 5102: 4.73 t/ha, 704 mm
+  11/40 builtin        kharif seed 5102: 4.74 t/ha, 709 mm
+  12/40 conventional   kharif seed 5102: 4.01 t/ha, 1046 mm
+  13/40 api            rabi   seed 5103: 3.78 t/ha, 1152 mm
+  14/40 api-no-advice  rabi   seed 5103: 3.78 t/ha, 1152 mm
+  15/40 builtin        rabi   seed 5103: 3.78 t/ha, 1152 mm
+  16/40 conventional   rabi   seed 5103: 3.55 t/ha, 1604 mm
+  17/40 api            kharif seed 5104: 4.70 t/ha, 769 mm
+  18/40 api-no-advice  kharif seed 5104: 4.63 t/ha, 735 mm
+  19/40 builtin        kharif seed 5104: 4.70 t/ha, 769 mm
+  20/40 conventional   kharif seed 5104: 4.50 t/ha, 1066 mm
+  21/40 api            rabi   seed 5105: 3.65 t/ha, 1246 mm
+  22/40 api-no-advice  rabi   seed 5105: 3.65 t/ha, 1246 mm
+  23/40 builtin        rabi   seed 5105: 3.65 t/ha, 1246 mm
+  24/40 conventional   rabi   seed 5105: 3.46 t/ha, 1707 mm
+  25/40 api            kharif seed 5106: 4.67 t/ha, 836 mm
+  26/40 api-no-advice  kharif seed 5106: 4.65 t/ha, 837 mm
+  27/40 builtin        kharif seed 5106: 4.67 t/ha, 836 mm
+  28/40 conventional   kharif seed 5106: 4.00 t/ha, 1203 mm
+  29/40 api            rabi   seed 5107: 3.78 t/ha, 1215 mm
+  30/40 api-no-advice  rabi   seed 5107: 3.83 t/ha, 1215 mm
+  31/40 builtin        rabi   seed 5107: 3.78 t/ha, 1215 mm
+  32/40 conventional   rabi   seed 5107: 3.79 t/ha, 1631 mm
+  33/40 api            kharif seed 5108: 4.75 t/ha, 725 mm
+  34/40 api-no-advice  kharif seed 5108: 4.74 t/ha, 725 mm
+  35/40 builtin        kharif seed 5108: 4.75 t/ha, 725 mm
+  36/40 conventional   kharif seed 5108: 4.61 t/ha, 1047 mm
+  37/40 api            rabi   seed 5109: 3.71 t/ha, 1173 mm
+  38/40 api-no-advice  rabi   seed 5109: 3.68 t/ha, 1171 mm
+  39/40 builtin        rabi   seed 5109: 3.71 t/ha, 1173 mm
+  40/40 conventional   rabi   seed 5109: 3.42 t/ha, 1570 mm
+
+                     api              api-no-advice    builtin      conventional
+yield t/ha           4.23 ± 0.31      4.22 ± 0.30      4.23 ± 0.31  3.95 ± 0.26 
+irrigation mm        956 ± 151        952 ± 154        956 ± 151    1336 ± 186  
+pump kWh             28.9 ± 4.6       28.8 ± 4.7       28.9 ± 4.6   40.4 ± 5.6  
+N kg/ha              109 ± 7          109 ± 7          109 ± 7      110 ± 6     
+pesticide a.i. g/ha  9.5 ± 2.4        8.2 ± 3.1        9.5 ± 2.4    360.2 ± 0.4 
+Bt kg/ha             0.24 ± 0.11      0.21 ± 0.10      0.24 ± 0.11  0.00 ± 0.00 
+sprayed m²           20 ± 7           19 ± 8           20 ± 7       292 ± 7     
+CH4 kg/ha            65 ± 4           62 ± 1           65 ± 4       113 ± 2     
+calls                289 ± 3          289 ± 4          289 ± 3      289 ± 4     
+tokens in            1353036 ± 29226  1137552 ± 17095  0 ± 0        0 ± 0       
+tokens out           14440 ± 538      13129 ± 932      0 ± 0        0 ± 0       
+
+api: 1,353,036 input + 14,440 output tokens per season ≈ US$4.28 per season at $3/$15 per million tokens (token counts from the stand-in: the real model's replies will be longer)
+
+api-no-advice: 1,137,552 input + 13,129 output tokens per season ≈ US$3.61 per season at $3/$15 per million tokens (token counts from the stand-in: the real model's replies will be longer)
+
+stand-in check: api(mock) made exactly the built-in decisions in 10 of 10 seasons
+
+written to ../tests/results/compare10.json

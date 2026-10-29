@@ -1,0 +1,43 @@
+ok   desktop-light: fields view loads
+ok   desktop-light: 4 decisions wait for approval
+ok   desktop-light: stand-in decisions are labelled "stand-in mock API"
+ok   desktop-light: approving from the page hands the decision to its arm (queued)
+ok   desktop-light: rejecting from the page records the reason
+ok   desktop-light: the person's reason reaches the decision maker in the next call
+ok   desktop-light: the approved decision is carried out by its arm once the clock moves (executed)
+ok   desktop-light: "New season" from the page resets to day 0 with the API in auto mode
+ok   desktop-light: Run and Pause from the page (status paused on day 52, 112 calls so far)
+ok   desktop-light: adding a storm from the page is confirmed ("Event added.")
+ok   desktop-light: the storm is in the weather log: "Heavy storm: about 95 mm tomorrow from 14:00"
+ok   desktop-light: the storm triggers a decision call (2026-07-23T23:00, triggers event)
+ok   desktop-light: about 95 mm of storm rain reaches the fields (95 mm on A in a day)
+ok   desktop-light: arrow keys move the selection (Square A2,2)
+ok   desktop-light: a decision's detail shows the state that was sent
+ok   desktop-light: views switch from the keyboard
+ok   desktop-light: no sideways scrolling (0px)
+ok   desktop-light: no console errors
+ok   desktop-dark: fields view loads
+ok   desktop-dark: arrow keys move the selection (Square A2,2)
+ok   desktop-dark: a decision's detail shows the state that was sent
+ok   desktop-dark: views switch from the keyboard
+ok   desktop-dark: no sideways scrolling (0px)
+ok   desktop-dark: no console errors
+ok   phone-light: fields view loads
+ok   phone-light: arrow keys move the selection (Square A2,2)
+ok   phone-light: a decision's detail shows the state that was sent
+ok   phone-light: views switch from the keyboard
+ok   phone-light: no sideways scrolling (0px)
+ok   phone-light: no console errors
+ok   phone-dark: fields view loads
+ok   phone-dark: arrow keys move the selection (Square A2,2)
+ok   phone-dark: a decision's detail shows the state that was sent
+ok   phone-dark: views switch from the keyboard
+ok   phone-dark: no sideways scrolling (0px)
+ok   phone-dark: no console errors
+ok   whole season: a kharif season runs to the end from the page (411 s, 288 calls to the stand-in)
+ok   whole season: both fields harvested (A 4.73 t/ha, B 4.71 t/ha)
+ok   whole season: every decision came from the stand-in ({"mock":227})
+ok   whole season: the conventional run on the same weather finished alongside (4.67 t/ha against 4.72)
+ok   whole season: no console errors
+ok   backend down: the page says so ("The farm server is not answering.Start it from the backend folder with python -m paddy ser…")
+all checks passed in 493 s

@@ -1,0 +1,15 @@
+repeat  kharif 20261024  builtin      identical  12a884b29cf1 48c45fe19c35
+repeat  kharif 20261024  conventional identical  62041ae98cbc df49d2d86d5e
+repeat  kharif 20261024  api          identical  12a884b29cf1 48c45fe19c35
+api(stand-in) = built-in  kharif 20261024  yes
+repeat  rabi   7400011   builtin      identical  ebef58c09deb e11f7f0e81f7
+repeat  rabi   7400011   conventional identical  c94777321e12 ef99f4700186
+repeat  rabi   7400011   api          identical  ebef58c09deb e11f7f0e81f7
+api(stand-in) = built-in  rabi   7400011   yes
+repeat  kharif 7400012   builtin      identical  b5059024b6a6 74a27bca2707
+repeat  kharif 7400012   conventional identical  2fa1aa6aec0d 66475a3ace27
+repeat  kharif 7400012   api          identical  b5059024b6a6 74a27bca2707
+api(stand-in) = built-in  kharif 7400012   yes
+replay  kharif 20261024  faults=no  calls 302, failed 0, fallbacks 0: identical
+replay  rabi   7400011   faults=yes calls 285, failed 0, fallbacks 0: identical
+ALL IDENTICAL (138 s)

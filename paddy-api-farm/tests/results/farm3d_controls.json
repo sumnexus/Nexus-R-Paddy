@@ -1,0 +1,117 @@
+{
+ "page": "paddy-replay.html",
+ "passed": 22,
+ "failed": 0,
+ "results": [
+  {
+   "name": "desktop: the view is still when nobody touches it",
+   "ok": true,
+   "detail": "span 364 → 363 px (×1.00), bearing -0.8° → -0.8°, middle moved 0 px"
+  },
+  {
+   "name": "mouse: drag orbits the view",
+   "ok": true,
+   "detail": "span 364 → 210 px (×0.58), bearing -0.8° → -63.1°, middle moved 113 px"
+  },
+  {
+   "name": "mouse: vertical drag tilts the view",
+   "ok": true,
+   "detail": "span 364 → 361 px (×0.99), bearing -0.8° → -0.5°, middle moved 9 px; field A's height over width on the screen 0.582 → 0.408"
+  },
+  {
+   "name": "mouse: right-drag pans the view",
+   "ok": true,
+   "detail": "span 364 → 386 px (×1.06), bearing -0.8° → -0.8°, middle moved 120 px"
+  },
+  {
+   "name": "mouse: Shift-drag pans the view",
+   "ok": true,
+   "detail": "span 364 → 344 px (×0.95), bearing -0.8° → -0.7°, middle moved 106 px"
+  },
+  {
+   "name": "mouse: the wheel zooms in",
+   "ok": true,
+   "detail": "span 364 → 566 px (×1.56), bearing -0.8° → -0.8°, middle moved 43 px"
+  },
+  {
+   "name": "mouse: the wheel zooms out",
+   "ok": true,
+   "detail": "span 566 → 364 px (×0.64), bearing -0.8° → -0.8°, middle moved 43 px"
+  },
+  {
+   "name": "keyboard: + zooms in",
+   "ok": true,
+   "detail": "+ + +: span 364 → 519 px (×1.43), bearing -0.8° → -0.8°, middle moved 33 px; field A's height over width 0.582 → 0.586"
+  },
+  {
+   "name": "keyboard: − zooms out",
+   "ok": true,
+   "detail": "- - -: span 364 → 253 px (×0.70), bearing -0.8° → -0.8°, middle moved 24 px; field A's height over width 0.582 → 0.580"
+  },
+  {
+   "name": "keyboard: arrows orbit",
+   "ok": true,
+   "detail": "ArrowLeft ArrowLeft ArrowLeft: span 364 → 378 px (×1.04), bearing -0.8° → 14.8°, middle moved 48 px; field A's height over width 0.582 → 0.555"
+  },
+  {
+   "name": "keyboard: WASD pans",
+   "ok": true,
+   "detail": "d d d: span 364 → 362 px (×1.00), bearing -0.8° → -0.8°, middle moved 126 px; field A's height over width 0.582 → 0.549"
+  },
+  {
+   "name": "keyboard: Shift+arrows pan",
+   "ok": true,
+   "detail": "Shift+ArrowRight Shift+ArrowRight Shift+ArrowRight: span 364 → 362 px (×1.00), bearing -0.8° → -0.8°, middle moved 126 px; field A's height over width 0.582 → 0.549"
+  },
+  {
+   "name": "keyboard: PageUp tilts",
+   "ok": true,
+   "detail": "PageUp PageUp PageUp: span 364 → 369 px (×1.01), bearing -0.8° → -1.0°, middle moved 10 px; field A's height over width 0.582 → 0.758"
+  },
+  {
+   "name": "keyboard: PageDown tilts back",
+   "ok": true,
+   "detail": "PageDown PageDown PageDown: span 364 → 360 px (×0.99), bearing -0.8° → -0.5°, middle moved 11 px; field A's height over width 0.582 → 0.371"
+  },
+  {
+   "name": "desktop: the page did not scroll",
+   "ok": true,
+   "detail": "scroll 0, 0"
+  },
+  {
+   "name": "desktop: no console errors",
+   "ok": true,
+   "detail": "none"
+  },
+  {
+   "name": "touch: one-finger drag orbits the view",
+   "ok": true,
+   "detail": "span 157 → 201 px (×1.28), bearing 93.8° → 29.4°, middle moved 41 px"
+  },
+  {
+   "name": "touch: pinching out zooms in",
+   "ok": true,
+   "detail": "span 201 → 869 px (×4.32), bearing 29.4° → 30.7°, middle moved 215 px"
+  },
+  {
+   "name": "touch: pinching in zooms out",
+   "ok": true,
+   "detail": "span 869 → 187 px (×0.22), bearing 30.7° → 29.3°, middle moved 216 px"
+  },
+  {
+   "name": "touch: a two-finger drag pans the view",
+   "ok": true,
+   "detail": "span 187 → 203 px (×1.08), bearing 29.3° → 28.1°, middle moved 109 px"
+  },
+  {
+   "name": "touch: the page itself did not scroll or zoom",
+   "ok": true,
+   "detail": "scroll 0, 0"
+  },
+  {
+   "name": "phone: no console errors",
+   "ok": true,
+   "detail": "none"
+  }
+ ]
+}

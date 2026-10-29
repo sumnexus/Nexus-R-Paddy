@@ -1,0 +1,23 @@
+ok   replay-desktop-light: labelled as a stand-in replay
+ok   replay-desktop-light: opens on a growing crop (Day 60 of the kharif season, decisions by the decision API)
+ok   replay-desktop-light: steps to the next decision point (Fri 31 Jul 2026, 18:00)
+ok   replay-desktop-light: a decision's call opens with the state that was sent
+ok   replay-desktop-light: the charts carry the conventional run on the same weather
+ok   replay-desktop-light: the comparison tables are on the page (Validation campaign | Strategy comparison | The recorded season)
+ok   replay-desktop-light: "Back to day 0" starts over (Day 0 of the kharif season, decisions by the decision API)
+ok   replay-desktop-light: Run plays the season (Day 1 of the kharif season, decisions by the decision API)
+ok   replay-desktop-light: no sideways scrolling (0px)
+ok   replay-desktop-light: no console errors
+ok   replay-desktop-light: no network requests
+ok   replay-phone-dark: labelled as a stand-in replay
+ok   replay-phone-dark: opens on a growing crop (Day 60 of the kharif season, decisions by the decision API)
+ok   replay-phone-dark: steps to the next decision point (Fri 31 Jul 2026, 18:00)
+ok   replay-phone-dark: a decision's call opens with the state that was sent
+ok   replay-phone-dark: the charts carry the conventional run on the same weather
+ok   replay-phone-dark: the comparison tables are on the page (Validation campaign | Strategy comparison | The recorded season)
+ok   replay-phone-dark: "Back to day 0" starts over (Day 0 of the kharif season, decisions by the decision API)
+ok   replay-phone-dark: Run plays the season (Day 1 of the kharif season, decisions by the decision API)
+ok   replay-phone-dark: no sideways scrolling (0px)
+ok   replay-phone-dark: no console errors
+ok   replay-phone-dark: no network requests
+all checks passed

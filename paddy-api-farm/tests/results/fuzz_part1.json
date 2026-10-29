@@ -1,0 +1,80 @@
+{
+ "replies": 3000,
+ "decisions_parsed": 4474,
+ "schema_errors": 13787,
+ "accepted": 1311,
+ "warning": 706,
+ "rejected": 2457,
+ "executed": 1624,
+ "skipped_at_execution": 11,
+ "crashes": 0,
+ "violations": 0,
+ "by_action": {
+  "drain": {
+   "accepted": 9,
+   "warning": 342,
+   "rejected": 114
+  },
+  "soil_check": {
+   "accepted": 349,
+   "warning": 0,
+   "rejected": 98
+  },
+  "amend": {
+   "accepted": 2,
+   "warning": 36,
+   "rejected": 132
+  },
+  "hold": {
+   "accepted": 317,
+   "warning": 0,
+   "rejected": 99
+  },
+  "scout": {
+   "accepted": 205,
+   "warning": 13,
+   "rejected": 63
+  },
+  "harvest": {
+   "accepted": 5,
+   "warning": 16,
+   "rejected": 349
+  },
+  "fertilise": {
+   "accepted": 110,
+   "warning": 43,
+   "rejected": 138
+  },
+  "wait": {
+   "accepted": 208,
+   "warning": 174,
+   "rejected": 104
+  },
+  "irrigate": {
+   "accepted": 90,
+   "warning": 50,
+   "rejected": 309
+  },
+  "transplant": {
+   "accepted": 0,
+   "warning": 4,
+   "rejected": 430
+  },
+  "spray": {
+   "accepted": 3,
+   "warning": 28,
+   "rejected": 165
+  },
+  "puddle": {
+   "accepted": 13,
+   "warning": 0,
+   "rejected": 456
+  }
+ },
+ "snapshots": 372,
+ "seconds": 3209.4,
+ "examples": {
+  "crash": [],
+  "violation": []
+ }
+}

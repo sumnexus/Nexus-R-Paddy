@@ -1,0 +1,25 @@
+{
+  "name": "paddy-api-farm-web",
+  "version": "2.0.0",
+  "private": true,
+  "description": "React website for the Paddy API Farm: two 6 × 6 paddy fields run by an external decision API.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:offline": "node build.mjs",
+    "build:replay": "node build.mjs --replay ../runs/demo-kharif/replay.json",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "esbuild": "^0.25.0",
+    "vite": "^7.0.0"
+  },
+  "license": "MIT"
+}

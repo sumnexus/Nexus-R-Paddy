@@ -1,0 +1,11 @@
+The fonts in this folder are Latin subsets, made with fontTools for this project, of:
+
+  Inter (inter-*.woff)
+    Copyright 2016 The Inter Project Authors. https://github.com/rsms/inter
+
+  Lora (field-serif-var.woff, field-serif-italic-var.woff)
+    Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic),
+    with Reserved Font Name "Lora". Because a subset is a modified version and "Lora" is a Reserved
+    Font Name, the subsets are renamed "Field Serif".
+
+Both are licensed under the SIL Open Font License, Version 1.1 (https://openfontlicense.org).

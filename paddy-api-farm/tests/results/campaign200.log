@@ -1,0 +1,13 @@
+                     builtin      conventional  builtin-cf   api-no-advice 
+yield t/ha           4.24 ± 0.06  3.95 ± 0.06   4.24 ± 0.06  4.22 ± 0.06   
+irrigation mm        942 ± 29     1313 ± 36     1307 ± 35    948 ± 29      
+pump kWh             28.5 ± 0.9   39.7 ± 1.1    39.5 ± 1.1   28.7 ± 0.9    
+N kg/ha              110 ± 2      110 ± 1       110 ± 2      110 ± 2       
+pesticide a.i. g/ha  9.0 ± 0.9    360.5 ± 0.1   8.9 ± 0.9    8.5 ± 0.8     
+Bt kg/ha             0.26 ± 0.03  0.00 ± 0.00   0.25 ± 0.02  0.21 ± 0.02   
+sprayed m²           22 ± 2       297 ± 2       22 ± 2       18 ± 1        
+CH4 kg/ha            64 ± 1       113 ± 1       117 ± 1      62 ± 0        
+calls                293 ± 1      288 ± 1       288 ± 1      290 ± 1       
+tokens in            0 ± 0        0 ± 0         0 ± 0        1248656 ± 4584
+tokens out           0 ± 0        0 ± 0         0 ± 0        12835 ± 161   
+written to tests/results/campaign200.json (800 seasons)

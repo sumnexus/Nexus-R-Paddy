@@ -1,0 +1,5 @@
+109 tests in 14 files, all pass, with the frozen paddy pack installed (275 s on two cores; v1: 68 tests in 8 files).
+New in v2: test_arms (7), test_engine_arms (11), test_awd_post (7), test_paddy_features (5), test_modelround (3),
+test_scene_state (1); test_managers gained the AWD-timing tests.
+api_client 11 · arms 7 · awd_post 7 · config 2 · engine 8 · engine_arms 11 · guardrails 10 · managers 14 · modelround 3
+paddy_features 5 · scene_state 1 · schema 12 · server 11 · twin 7
