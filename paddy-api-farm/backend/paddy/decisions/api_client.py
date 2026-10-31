@@ -61,7 +61,7 @@ def urllib_transport(method, url, headers, body, timeout):
 class DecisionAPI:
     def __init__(self, base_url='', model='', key=None, adapter='chat_completions', timeout_s=60.0, temperature=0.2, json_mode=True,
                  retries=3, fallback='hold', max_calls_per_real_hour=CFG.MAX_CALLS_PER_REAL_HOUR, price_in_per_m=None, price_out_per_m=None,
-                 transport=None, backoff_base_s=1.0, max_tokens=1500):
+                 transport=None, backoff_base_s=1.0, max_tokens=16000):
         if adapter not in ADAPTERS:
             raise ValueError(f'unknown adapter {adapter!r} (one of {", ".join(ADAPTERS)})')
         if fallback not in ('hold', 'builtin'):
