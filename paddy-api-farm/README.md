@@ -1,22 +1,22 @@
 # Paddy API Farm
 
-Two small paddy (rice) fields near Bengaluru, simulated hour by hour, where **every farm decision comes from an
-external AI model through an API**. Field A and field B are each a 6 × 6 grid of 1 m² squares. Twice a day, and
-whenever something happens, the farm sends the model a compact picture of both fields, with advice from trained
-random forests. The model replies in JSON: what to do, where, when and why. Software checks every decision against
-safety rules before a Python digital twin carries it out. A React website shows the fields, every decision with the
-model's own reason, and lets you run, pause, step, add weather and pest events, and approve or reject decisions.
+Two small paddy (rice) fields near Bengaluru, simulated hour by hour. Choose the decision source: connect an external
+AI model through an API, use the built-in manager, or use the conventional manager. With the API manager, the farm
+sends the model a compact picture of both fields and advice from trained random forests; the model replies in JSON
+with what to do, where, when and why. Software checks each decision against safety rules before the Python digital
+twin carries it out. Field A and field B are each a 6 × 6 grid of 1 m² squares. A React website shows the fields and
+decision history, and lets you run, pause, step, add weather and pest events, and approve or reject decisions.
 
 **Version 2** puts the two fields on the playground's own 3D model, with four robot arms that carry out every
 decision square by square, and brings the forecasts the farm checks to 95 % or more on new test and live sets — every
 check in every group, except v1's yield forecast for conventionally managed fields on the live set (94.5 %) — see
 [What's new in v2](#whats-new-in-v2).
 
-You need your own decision API (any service that speaks the common chat-completions format) and its key. Without a
-key everything still runs: a **stand-in mock API** answers with the built-in manager's choices, and the website labels
-those decisions "stand-in" everywhere.
+For AI-driven decisions, connect a real provider that speaks the common chat-completions format and supply its key.
+The `builtin` and `conventional` managers are local alternatives that need no provider. For API integration tests, an
+optional local mock server returns the built-in manager's choices, labelled "stand-in"; it is not a real AI model.
 
-![The two paddy fields in 3D under the sensor frame, on a kharif morning of the recorded stand-in season: the four arms, water at its true depth, the rice by stage, and the solar array, battery and biogas unit that power them](docs/screens/farm3d-overview.png)
+![The two paddy fields in 3D under the sensor frame during a recorded simulation using mock decisions: the four arms, water at its true depth, the rice by stage, and the solar array, battery and biogas unit that power them](docs/screens/farm3d-overview.png)
 
 - [What's new in v2](#whats-new-in-v2)
 - [Run it](#run-it)
@@ -77,51 +77,69 @@ cd paddy-api-farm/backend
 pip install -r requirements.txt            # NumPy; nothing else
 ```
 
-### Without a key (stand-in mock)
+### Connect a real decision API
+
+Create a `.env` file in the project root and set the provider's endpoint, model name, adapter and key there. The file
+is git-ignored; never commit or share it. Use the values and authentication format required by your provider:
+
+```text
+API_BASE_URL=https://your-provider.example/v1
+API_MODEL=your-provider-model
+API_KEY=your-private-key
+API_ADAPTER=chat_completions
+```
+
+From `backend`, verify the settings without a request, then make one real test call:
+
+```bash
+python -m paddy check-api --dry-run  # display settings; does not contact the provider
+python -m paddy check-api            # sends one real request; provider charges may apply
+```
+
+Start the live simulation with real model decisions:
+
+```bash
+python -m paddy serve --manager api                 # http://127.0.0.1:8000; real API calls as decisions are needed
+python -m paddy serve --manager api --mode approve  # same real API, but decisions wait for approval in the website
+```
+
+For a headless season, the CLI prints a cost estimate and stops unless you explicitly add `--yes`:
+
+```bash
+python -m paddy run --manager api --out runs/real-api-kharif --yes
+```
+
+A season makes about 290 calls (06:00 and 18:00 for about 140 days, plus triggers). `serve` does not have the CLI's
+`--yes` safeguard: once started with `--manager api`, the live server can make chargeable calls as the simulation
+runs. Check provider pricing and budgets first.
+
+### Local decision managers (no provider request)
+
+For a simulation that does not contact an external provider, choose `--manager builtin` (the farm's rules with forest
+advice) or `--manager conventional` (calendar inputs and continuous flooding). These are local decision managers;
+the farm's twin, fields, weather and robot simulation still run normally.
+
+### Optional API stand-in for integration tests
+
+The mock server is a local HTTP test double that speaks the chat-completions format. It reads the farm state and returns
+the built-in manager's choices; its decisions are labelled "stand-in" and do not come from a real model. To test that
+HTTP path without provider calls, use:
 
 ```bash
 python -m paddy serve --manager api --mock      # open http://127.0.0.1:8000
 ```
 
-The mock is a real HTTP server on your machine speaking the chat-completions format. It reads the state out of each
-request and answers with the built-in manager's choices. Every decision it makes is marked "stand-in". Add
-`--faults p429=0.05,p500=0.03,pmalformed=0.05,punsafe=0.1` to watch the retries, repair requests and guardrails work.
-
-### With your key
-
-1. Copy `.env.example` to `.env` next to this README and fill in `API_BASE_URL`, `API_MODEL` and `API_KEY`. `.env` is
-   git-ignored and left out of the zip; the key is never logged, stored, exported or shown.
-2. Check the connection with one call:
-
-   ```bash
-   python -m paddy check-api            # prints the settings (key only as "present"), sends one state, validates the reply
-   python -m paddy check-api --dry-run  # settings only, no call
-   ```
-3. Run the farm on it:
-
-   ```bash
-   python -m paddy serve --manager api                 # decisions carried out automatically
-   python -m paddy serve --manager api --mode approve  # each decision waits for you in the website
-   ```
-
-A season takes about 290 calls (06:00 and 18:00 for about 140 days, plus triggers). Commands that would call the real
-API many times (`run`, `compare`, the website's comparison) show the cost estimate first and wait for an explicit yes
-(`--yes`, or the confirmation box in the website).
-
-### Without any API
-
-`--manager builtin` (the farm's own rules with the forests' advice) or `--manager conventional` (common practice:
-calendar inputs, continuous flooding).
+Add `--faults p429=0.05,p500=0.03,pmalformed=0.05,punsafe=0.1` to exercise retries, repair requests and guardrails.
 
 ### Headless
 
 ```bash
-python -m paddy run --manager api --mock --out runs/demo      # one season; every call and decision recorded
-python -m paddy replay runs/demo                              # re-run it from the recorded replies: identical
-python -m paddy compare --managers api,builtin,conventional --seasons 10 --mock   # paired, with a cost estimate
+python -m paddy run --manager api --out runs/real-api-season --yes  # real API season; estimate and explicit consent
+python -m paddy replay runs/real-api-season                        # replay the recorded replies: identical
+python -m paddy compare --managers api,builtin,conventional --seasons 10 --yes  # paired; real API calls need consent
 python -m paddy campaign --managers builtin,conventional --seasons 200            # validation campaign
 python -m paddy fuzz --n 10000                                # guardrail fuzzing
-python -m paddy mock --port 8765                              # the stand-in API on its own
+python -m paddy mock --port 8765                              # optional local HTTP test double
 python -m paddy sets                                          # v2: the data sets' seeds and weather years, overlap check
 python -m paddy batch --set T --start 0 --stop 200 --models paddy --tag after   # v2: a data set, resumable chunks
 ```
@@ -137,13 +155,13 @@ machine: `node build.mjs` bundles with esbuild, taking React and d3 from `node_m
 
 ```bash
 cd backend
-python -m paddy run --manager api --mock --seed 20261024 --season kharif --out ../runs/demo-kharif
-python -m paddy export-replay ../runs/demo-kharif --baseline \
-    --campaign ../tests/results/campaign200.json="Validation campaign"
-cd ../frontend && node build.mjs --replay ../runs/demo-kharif/replay.json    # → dist-replay/paddy-replay.html
+python -m paddy run --manager api --seed 20261024 --season kharif --out ../runs/real-api-kharif --yes
+python -m paddy export-replay ../runs/real-api-kharif --baseline
+cd ../frontend && node build.mjs --replay ../runs/real-api-kharif/replay.json  # → dist-replay/paddy-replay.html
 ```
 
-The replay page carries the 3D farm too and replays the recorded arm plans; it is one self-contained file
+The example above uses the real API and can incur charges. The replay page carries the 3D farm too and replays the
+recorded arm plans; it is one self-contained file
 (5.9 MB: every call of the recorded season with the state sent and the reply, 2.8 MB; the 06:00/18:00 frames, 1.2 MB; the
 arm plans and keyframes, 0.7 MB; decisions, hourly weather, water and power, the conventional run on the same weather
 and the campaign summary, 0.5 MB; the page's code and fonts, 0.7 MB).
@@ -551,8 +569,9 @@ appears, the harvested crop turns to stubble), a gate when the arm sets it. Betw
 plus the arm events up to that second. While an arm is working the clock slows to a watchable rate, chosen next to the
 layers (10×, 30×, 60×, 240× or no slow-down): on the replay page the page's own clock, 60× by default, skipping quiet
 hours to the next arm start; on the live site the server's clock, 30× by default and at most 45 s of real time per
-simulated hour (`POST /api/sim/speed {"x": …, "work": …}`). With the slow-down a whole season through the stand-in takes
-about 7 minutes on the live site (v1: 13 s); "no slow-down" brings it back to the speed setting alone.
+simulated hour (`POST /api/sim/speed {"x": …, "work": …}`). With the slow-down a whole season using the local decision
+stand-in takes about 7 minutes on the live site (v1: 13 s); real API latency and provider limits can make a real-API
+season take longer. "No slow-down" brings it back to the speed setting alone.
 
 **Inspecting.** Click a square (its readings, crop, water depth, pest, the decisions that touched it) or an arm (its
 role, what it is doing, its current job, busy until, queued jobs, season totals). Camera presets: overview, field A,
@@ -584,7 +603,7 @@ faster): median frame rates over ten one-second readings after a 12 s warm-up (`
 
 | | |
 |---|---|
-| ![The overview of the recorded stand-in season on day 60 at 18:00: the frame, both fields at panicle initiation, the four arms parked at the service bay, the solar array, battery and biogas unit](docs/screens/farm3d-overview.png) | ![Field A up close: rice at panicle initiation over 13 mm of water, the outlet gate and the water tube on its board](docs/screens/farm3d-field-a.png) |
+| ![The overview of the recorded simulation using stand-in decisions on day 60 at 18:00: the frame, both fields at panicle initiation, the four arms parked at the service bay, the solar array, battery and biogas unit](docs/screens/farm3d-overview.png) | ![Field A up close: rice at panicle initiation over 13 mm of water, the outlet gate and the water tube on its board](docs/screens/farm3d-field-a.png) |
 | The overview (day 60, 18:00): frame, fields, arms parked at the bay, power plant | Field A: rice at panicle initiation, 13 mm of water, the outlet and the water tube |
 | ![Approve mode on the live site: a pending soil check's planned path — the planting arm's ghost and the squares it will probe — drawn before approval](docs/screens/farm3d-approve-preview.png) | ![After approval the planting arm sets off along that path (day 0, 06:00)](docs/screens/farm3d-arm-at-work.png) |
 | Approve mode: a pending decision's planned path, before approval | … and the arm carrying it out after approval |
@@ -725,8 +744,8 @@ Kharif for even *i*, rabi for odd *i*; half the cases draw one to three events (
 overcast week) from a hash of their seed. `python -m paddy sets` checks every pair of sets and every v1 run for a
 shared seed or weather year: 45 pairs, 0 shared.
 
-The four decision makers are the brief's: the **built-in** manager (which is also what the API does through the
-stand-in: it makes exactly the built-in decisions, checked in the tests and the HTTP seasons), **conventional**
+The four decision makers are the brief's: the **built-in** manager (which the test stand-in reproduces exactly for
+testing the API path; this does not describe the behavior of a real external model), **conventional**
 practice, the **API without the forests' advice** through the stand-in (`api-no-advice`, "API, no advice" in the
 tables), and the **continuous-flooding** ablation (`builtin-cf`).
 
@@ -1204,9 +1223,11 @@ from the readings only.
 
 <!--RESULTS-->
 Everything here was produced on the final v2 build by the commands shown; the raw outputs are in `tests/results/`
-(v1's are kept in `tests/results/v1/`). **Every "API" number comes from the stand-in**, which answers with the built-in
-manager's choices (or, without advice, its plain rules): these results test the plumbing, the guardrails and the farm,
-not a real model's judgement.
+(v1's are kept in `tests/results/v1/`). The farm simulation is the same whether decisions come from a real API or the
+local test stand-in. Unless a result explicitly says otherwise, the `api` and `api-no-advice` validation rows use the
+stand-in, which answers with the built-in manager's choices (or, without advice, its plain rules). Those rows test the
+protocol, records, guardrails and farm; they are not a benchmark of an external model. A real decision API has also
+been called with this project, but its provider-specific behavior is not represented by these benchmark tables.
 
 ### Unit and integration tests
 
@@ -1548,7 +1569,7 @@ against the stand-in, and the page shown when the backend is down), `tests/resul
 
 | | | |
 |---|---|---|
-| ![A decision, the call behind it and its arm plan](docs/screens/decision-detail.png) | ![The charts at the end of a stand-in season, against conventional practice on the same weather](docs/screens/charts-season-end.png) | ![The fields on a phone, dark theme, plan view](docs/screens/phone-dark.png) |
+| ![A decision, the call behind it and its arm plan](docs/screens/decision-detail.png) | ![The charts at the end of the simulated season using stand-in decisions, against conventional practice on the same weather](docs/screens/charts-season-end.png) | ![The fields on a phone, dark theme, plan view](docs/screens/phone-dark.png) |
 | A decision, the call behind it and its arm plan | A whole season against conventional practice | Phone, dark, plan view |
 <!--/RESULTS-->
 
@@ -1743,9 +1764,11 @@ v1 of this project is kept: `release/paddy-api-farm-v1.zip` is a byte-for-byte c
 
 ## Limits
 
-- **Stand-ins only.** Every API result here comes from the mock, which repeats the built-in manager (terse reasons,
-  a lot of scouting). How a real model decides, and what it costs, is only known once you run `check-api` and
-  `compare` with your key. Token counts here are the stand-in's (characters ÷ 4); your provider counts its own way.
+- **Decision-source scope.** The farm's twin is a real, executable simulation, and the project has also been used with
+  a real decision API. The `api` and `api-no-advice` results in the published validation campaigns and included demo
+  replay use the local stand-in, which repeats the built-in manager (terse reasons, a lot of scouting); they test the
+  integration and farm, not an external model's judgement. A real API's decisions and charges depend on its provider
+  and model. Token figures in stand-in runs are estimated from characters; providers count tokens their own way.
 - **A model, not a farm.** Two 36 m² fields, hourly steps, one water level per field, idealised sensors. The
   agronomy is the original project's simplified crop model, with paddy parameters from its library; numbers are
   plausible against published ranges, not calibrated to a real farm.
@@ -1811,7 +1834,9 @@ v1 of this project is kept: `release/paddy-api-farm-v1.zip` is a byte-for-byte c
   answers can't be reproduced, but recorded runs can.
 - **Paired comparisons.** Every comparison runs the same fields and weather under each decision maker; differences
   come with confidence intervals.
-- **Safe defaults.** The fallback is `hold`; real API calls in bulk need an explicit yes; the HTTP actuator is off.
+- **Safe defaults.** The fallback is `hold`; headless `run` and `compare` calls to a real API require an explicit yes,
+  while the live `serve --manager api` server can make chargeable calls without a separate confirmation; the HTTP
+  actuator is off.
 - **Design.** The website opens on the two fields, the thing a farmer looks at first — in v2 on the 3D farm, with the
   plan one click away (3D / Plan, remembered): squares coloured by the chosen layer, rice tufts that grow with the
   crop, pest dots, and each field's water tube drawn as an instrument with the AWD line. The decision maker's own words are set in a serif face, machine readings in a sans with tabular
@@ -1936,7 +1961,7 @@ The remaining settings are engineering choices rather than agronomy; each with i
 
 ```
 paddy-api-farm/
-  README.md  LICENSE  .env.example  .gitignore
+  README.md  LICENSE  .gitignore  (.env is created locally and git-ignored)
   backend/
     requirements.txt  pyproject.toml
     paddy/
@@ -1952,9 +1977,9 @@ paddy-api-farm/
     package.json  vite.config.js  build.mjs  index.html  src/  public/fonts/  dist/
     src/three/     v2: gl.js  geometry.js  scene.js (the playground's renderer and scene)  view.js (the record → 3D)
     src/components/Farm3D.jsx  ArmPanel.jsx   v2: the 3D farm and the arm panel
-    dist-replay/   paddy-replay.html: the recorded demo season, playable without a server (with the 3D farm)
+    dist-replay/   paddy-replay.html: the recorded simulation using stand-in decisions, playable without a server (with the 3D farm)
   runs/
-    demo-kharif/   the demo season through the stand-in: every call (state sent, raw reply), decision and arm track
+    demo-kharif/   a real farm simulation with stand-in decisions: every call (state sent, raw reply), decision and arm track
     models/        v2: the model round's tables, candidates, final forests, ceilings and A/B results
     datasets/      v2: every season of the model round, one record and its rows per season (515 MB, so not in the
                    zip; `python -m paddy batch …` rebuilds them exactly, in the order of tools/models/RUNBOOK.md)
