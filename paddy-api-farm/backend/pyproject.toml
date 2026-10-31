@@ -8,7 +8,6 @@ version = "1.0.0"
 description = "Two 6 x 6 paddy fields run by an external decision API: digital twin, guardrails, REST API"
 requires-python = ">=3.10"
 dependencies = ["numpy>=1.24"]
-license = { text = "MIT" }
 
 [project.scripts]
 paddy = "paddy.cli:main"
